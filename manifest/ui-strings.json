@@ -5938,11 +5938,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28998,
+        "end_byte": 29095,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 957,
-        "start_byte": 28977
+        "line": 958,
+        "start_byte": 29074
       }
     ],
     "status": "accepted"
@@ -5951,11 +5951,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28930,
+        "end_byte": 29027,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 955,
-        "start_byte": 28905
+        "line": 956,
+        "start_byte": 29002
       }
     ],
     "status": "accepted"
@@ -13059,11 +13059,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28724,
+        "end_byte": 28821,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 949,
-        "start_byte": 28700
+        "line": 950,
+        "start_byte": 28797
       }
     ],
     "status": "accepted"
@@ -27380,11 +27380,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29066,
+        "end_byte": 29163,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 959,
-        "start_byte": 29041
+        "line": 960,
+        "start_byte": 29138
       }
     ],
     "status": "accepted"
@@ -32852,11 +32852,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29423,
+        "end_byte": 29520,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 969,
-        "start_byte": 29378
+        "line": 970,
+        "start_byte": 29475
       }
     ],
     "status": "accepted"
@@ -33679,11 +33679,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29522,
+        "end_byte": 29619,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 971,
-        "start_byte": 29467
+        "line": 972,
+        "start_byte": 29564
       }
     ],
     "status": "accepted"
@@ -45926,11 +45926,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29204,
+        "end_byte": 29301,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 963,
-        "start_byte": 29171
+        "line": 964,
+        "start_byte": 29268
       }
     ],
     "status": "accepted"
@@ -51098,11 +51098,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29269,
+        "end_byte": 29366,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 965,
-        "start_byte": 29250
+        "line": 966,
+        "start_byte": 29347
       }
     ],
     "status": "accepted"
@@ -51189,11 +51189,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29333,
+        "end_byte": 29430,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 967,
-        "start_byte": 29316
+        "line": 968,
+        "start_byte": 29413
       }
     ],
     "status": "accepted"
@@ -51748,11 +51748,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28237,
+        "end_byte": 28334,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 929,
-        "start_byte": 28187
+        "line": 930,
+        "start_byte": 28284
       }
     ],
     "status": "accepted"
@@ -51787,11 +51787,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28862,
+        "end_byte": 28959,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 953,
-        "start_byte": 28834
+        "line": 954,
+        "start_byte": 28931
       }
     ],
     "status": "accepted"
@@ -51800,11 +51800,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28793,
+        "end_byte": 28890,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 951,
-        "start_byte": 28767
+        "line": 952,
+        "start_byte": 28864
       }
     ],
     "status": "accepted"
@@ -57800,11 +57800,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 26765,
+        "end_byte": 26862,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 872,
-        "start_byte": 26747
+        "line": 873,
+        "start_byte": 26844
       }
     ],
     "status": "accepted"
@@ -58254,11 +58254,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28421,
+        "end_byte": 28518,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 941,
-        "start_byte": 28391
+        "line": 942,
+        "start_byte": 28488
       }
     ],
     "status": "accepted"
@@ -58319,11 +58319,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 26483,
+        "end_byte": 26580,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 863,
-        "start_byte": 26457
+        "line": 864,
+        "start_byte": 26554
       }
     ],
     "status": "accepted"
@@ -58358,11 +58358,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 27204,
+        "end_byte": 27301,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 889,
-        "start_byte": 27158
+        "line": 890,
+        "start_byte": 27255
       }
     ],
     "status": "accepted"
@@ -58384,11 +58384,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 27295,
+        "end_byte": 27392,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 891,
-        "start_byte": 27254
+        "line": 892,
+        "start_byte": 27351
       }
     ],
     "status": "accepted"
@@ -58605,11 +58605,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 27523,
+        "end_byte": 27620,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 903,
-        "start_byte": 27481
+        "line": 904,
+        "start_byte": 27578
       }
     ],
     "status": "accepted"
@@ -58618,11 +58618,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 27610,
+        "end_byte": 27707,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 905,
-        "start_byte": 27573
+        "line": 906,
+        "start_byte": 27670
       }
     ],
     "status": "accepted"
@@ -67306,11 +67306,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29127,
+        "end_byte": 29224,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 961,
-        "start_byte": 29107
+        "line": 962,
+        "start_byte": 29204
       }
     ],
     "status": "accepted"
@@ -69033,11 +69033,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28495,
+        "end_byte": 28592,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 943,
-        "start_byte": 28464
+        "line": 944,
+        "start_byte": 28561
       }
     ],
     "status": "accepted"
@@ -69085,11 +69085,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28656,
+        "end_byte": 28753,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 947,
-        "start_byte": 28604
+        "line": 948,
+        "start_byte": 28701
       }
     ],
     "status": "accepted"
@@ -69111,11 +69111,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 28570,
+        "end_byte": 28667,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 945,
-        "start_byte": 28532
+        "line": 946,
+        "start_byte": 28629
       }
     ],
     "status": "accepted"
@@ -89881,11 +89881,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 29707,
+        "end_byte": 29804,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 983,
-        "start_byte": 29676
+        "line": 984,
+        "start_byte": 29773
       }
     ],
     "status": "accepted"
@@ -91010,11 +91010,11 @@
     "occurrences": [
       {
         "call": "action_doc_comment",
-        "end_byte": 27870,
+        "end_byte": 27967,
         "file": "crates/zed_actions/src/lib.rs",
         "kind": "action_description",
-        "line": 917,
-        "start_byte": 27808
+        "line": 918,
+        "start_byte": 27905
       }
     ],
     "status": "accepted"
