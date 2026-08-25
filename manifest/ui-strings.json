@@ -193,19 +193,19 @@
     "occurrences": [
       {
         "call": "git_panel_prompt_format",
-        "end_byte": 86161,
+        "end_byte": 86041,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 2400,
-        "start_byte": 86143
+        "line": 2396,
+        "start_byte": 86023
       },
       {
         "call": "git_panel_prompt_format",
-        "end_byte": 87916,
+        "end_byte": 87796,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 2457,
-        "start_byte": 87898
+        "line": 2453,
+        "start_byte": 87778
       }
     ],
     "status": "accepted"
@@ -1407,11 +1407,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 232707,
+        "end_byte": 232587,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 6286,
-        "start_byte": 232701
+        "line": 6282,
+        "start_byte": 232581
       },
       {
         "call": "Label::new",
@@ -1642,11 +1642,11 @@
     "occurrences": [
       {
         "call": "Chip::new",
-        "end_byte": 254665,
+        "end_byte": 254545,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "chip",
-        "line": 6780,
-        "start_byte": 254644
+        "line": 6776,
+        "start_byte": 254524
       }
     ],
     "status": "ignored"
@@ -2366,11 +2366,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 334593,
+        "end_byte": 334473,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 8733,
-        "start_byte": 334590
+        "line": 8729,
+        "start_byte": 334470
       },
       {
         "call": "Label::new",
@@ -5513,11 +5513,11 @@
     "occurrences": [
       {
         "call": "git_panel_coauthor_tooltip",
-        "end_byte": 200907,
+        "end_byte": 200787,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5509,
-        "start_byte": 200887
+        "line": 5505,
+        "start_byte": 200767
       }
     ],
     "status": "accepted"
@@ -5656,11 +5656,11 @@
     "occurrences": [
       {
         "call": "action_disabled_when",
-        "end_byte": 286112,
+        "end_byte": 285992,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7458,
-        "start_byte": 286086
+        "line": 7454,
+        "start_byte": 285966
       },
       {
         "call": "action",
@@ -5677,11 +5677,11 @@
     "occurrences": [
       {
         "call": "action_disabled_when",
-        "end_byte": 285919,
+        "end_byte": 285799,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7453,
-        "start_byte": 285900
+        "line": 7449,
+        "start_byte": 285780
       },
       {
         "call": "action",
@@ -6646,11 +6646,11 @@
     "occurrences": [
       {
         "call": "child",
-        "end_byte": 281847,
+        "end_byte": 281727,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "child_text",
-        "line": 7344,
-        "start_byte": 281813
+        "line": 7340,
+        "start_byte": 281693
       }
     ],
     "status": "accepted"
@@ -7768,27 +7768,27 @@
       },
       {
         "call": "toggleable_entry",
-        "end_byte": 203610,
+        "end_byte": 203490,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_entry",
-        "line": 5576,
-        "start_byte": 203603
+        "line": 5572,
+        "start_byte": 203483
       },
       {
         "call": "commit_button_title",
-        "end_byte": 206795,
+        "end_byte": 206675,
+        "file": "crates/git_ui/src/git_panel.rs",
+        "kind": "button",
+        "line": 5641,
+        "start_byte": 206668
+      },
+      {
+        "call": "commit_button_title",
+        "end_byte": 206803,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
         "line": 5645,
-        "start_byte": 206788
-      },
-      {
-        "call": "commit_button_title",
-        "end_byte": 206923,
-        "file": "crates/git_ui/src/git_panel.rs",
-        "kind": "button",
-        "line": 5649,
-        "start_byte": 206916
+        "start_byte": 206796
       }
     ],
     "status": "accepted"
@@ -7797,11 +7797,11 @@
     "occurrences": [
       {
         "call": "commit_button_title",
-        "end_byte": 206878,
+        "end_byte": 206758,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 5647,
-        "start_byte": 206863
+        "line": 5643,
+        "start_byte": 206743
       }
     ],
     "status": "accepted"
@@ -8486,11 +8486,11 @@
     "occurrences": [
       {
         "call": "git_panel_prompt",
-        "end_byte": 77453,
+        "end_byte": 77333,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 2135,
-        "start_byte": 77407
+        "line": 2131,
+        "start_byte": 77287
       }
     ],
     "status": "accepted"
@@ -8577,11 +8577,11 @@
     "occurrences": [
       {
         "call": "git_panel_prompt_fragment",
-        "end_byte": 77318,
+        "end_byte": 77198,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 2132,
-        "start_byte": 77283
+        "line": 2128,
+        "start_byte": 77163
       }
     ],
     "status": "accepted"
@@ -11413,19 +11413,19 @@
       },
       {
         "call": "Button::new",
-        "end_byte": 226543,
+        "end_byte": 226423,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 6145,
-        "start_byte": 226535
+        "line": 6141,
+        "start_byte": 226415
       },
       {
         "call": "git_panel_prompt_answer",
-        "end_byte": 78096,
+        "end_byte": 77976,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_answer",
-        "line": 2152,
-        "start_byte": 78088
+        "line": 2148,
+        "start_byte": 77968
       },
       {
         "call": "prompt",
@@ -11698,11 +11698,11 @@
     "occurrences": [
       {
         "call": "Tooltip::text",
-        "end_byte": 198443,
+        "end_byte": 198323,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5446,
-        "start_byte": 198409
+        "line": 5442,
+        "start_byte": 198289
       }
     ],
     "status": "accepted"
@@ -12314,11 +12314,11 @@
       },
       {
         "call": "git_panel_tab",
-        "end_byte": 233530,
+        "end_byte": 233410,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tab_title",
-        "line": 6309,
-        "start_byte": 233521
+        "line": 6305,
+        "start_byte": 233401
       }
     ],
     "status": "accepted"
@@ -14563,11 +14563,11 @@
     "occurrences": [
       {
         "call": "child",
-        "end_byte": 217399,
+        "end_byte": 217279,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "child_text",
-        "line": 5931,
-        "start_byte": 217375
+        "line": 5927,
+        "start_byte": 217255
       }
     ],
     "status": "accepted"
@@ -15113,11 +15113,11 @@
       },
       {
         "call": "commit_button_title",
-        "end_byte": 207004,
+        "end_byte": 206884,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 5652,
-        "start_byte": 206996
+        "line": 5648,
+        "start_byte": 206876
       },
       {
         "call": "Button::new",
@@ -15221,11 +15221,11 @@
     "occurrences": [
       {
         "call": "commit_button_title",
-        "end_byte": 207050,
+        "end_byte": 206930,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 5654,
-        "start_byte": 207034
+        "line": 5650,
+        "start_byte": 206914
       }
     ],
     "status": "accepted"
@@ -15234,11 +15234,11 @@
     "occurrences": [
       {
         "call": "configure_commit_button",
-        "end_byte": 206353,
+        "end_byte": 206233,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5632,
-        "start_byte": 206333
+        "line": 5628,
+        "start_byte": 206213
       }
     ],
     "status": "accepted"
@@ -15255,11 +15255,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 219412,
+        "end_byte": 219292,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 5980,
-        "start_byte": 219346
+        "line": 5976,
+        "start_byte": 219226
       }
     ],
     "status": "accepted"
@@ -15923,11 +15923,11 @@
       },
       {
         "call": "Button::new",
-        "end_byte": 313903,
+        "end_byte": 313783,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 8186,
-        "start_byte": 313883
+        "line": 8182,
+        "start_byte": 313763
       },
       {
         "call": "Label::new",
@@ -16025,11 +16025,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 313667,
+        "end_byte": 313547,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 8180,
-        "start_byte": 313611
+        "line": 8176,
+        "start_byte": 313491
       }
     ],
     "status": "accepted"
@@ -16336,11 +16336,11 @@
     "occurrences": [
       {
         "call": "Tooltip::simple",
-        "end_byte": 298094,
+        "end_byte": 297974,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 7761,
-        "start_byte": 298065
+        "line": 7757,
+        "start_byte": 297945
       }
     ],
     "status": "accepted"
@@ -16396,11 +16396,11 @@
     "occurrences": [
       {
         "call": "Tooltip::simple",
-        "end_byte": 305268,
+        "end_byte": 305148,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 7940,
-        "start_byte": 305238
+        "line": 7936,
+        "start_byte": 305118
       }
     ],
     "status": "accepted"
@@ -16746,11 +16746,11 @@
     "occurrences": [
       {
         "call": "tooltip",
-        "end_byte": 259900,
+        "end_byte": 259780,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 6853,
-        "start_byte": 259866
+        "line": 6849,
+        "start_byte": 259746
       }
     ],
     "status": "accepted"
@@ -18688,11 +18688,11 @@
       },
       {
         "call": "action",
-        "end_byte": 285675,
+        "end_byte": 285555,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7448,
-        "start_byte": 285664
+        "line": 7444,
+        "start_byte": 285544
       },
       {
         "call": "action",
@@ -18775,11 +18775,11 @@
       },
       {
         "call": "action",
-        "end_byte": 285745,
+        "end_byte": 285625,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7449,
-        "start_byte": 285725
+        "line": 7445,
+        "start_byte": 285605
       },
       {
         "call": "action",
@@ -19313,11 +19313,11 @@
       },
       {
         "call": "suggest_commit_message_action",
-        "end_byte": 116937,
+        "end_byte": 116817,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "commit_message_prefix",
-        "line": 3257,
-        "start_byte": 116929
+        "line": 3253,
+        "start_byte": 116809
       },
       {
         "call": "Button::new",
@@ -19512,11 +19512,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 193594,
+        "end_byte": 193474,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 5311,
-        "start_byte": 193573
+        "line": 5307,
+        "start_byte": 193453
       },
       {
         "call": "SuccessStyle::PushPrLink.text",
@@ -26903,11 +26903,11 @@
       },
       {
         "call": "suggest_commit_message_action",
-        "end_byte": 116853,
+        "end_byte": 116733,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "commit_message_prefix",
-        "line": 3255,
-        "start_byte": 116845
+        "line": 3251,
+        "start_byte": 116725
       },
       {
         "call": "Button::new",
@@ -27811,11 +27811,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 265552,
+        "end_byte": 265432,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 6966,
-        "start_byte": 265326
+        "line": 6962,
+        "start_byte": 265206
       }
     ],
     "status": "accepted"
@@ -28972,19 +28972,19 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 285055,
+        "end_byte": 284935,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7436,
-        "start_byte": 285038
+        "line": 7432,
+        "start_byte": 284918
       },
       {
         "call": "git_panel_prompt_answer",
-        "end_byte": 77496,
+        "end_byte": 77376,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_answer",
-        "line": 2136,
-        "start_byte": 77479
+        "line": 2132,
+        "start_byte": 77359
       }
     ],
     "status": "accepted"
@@ -29066,11 +29066,11 @@
     "occurrences": [
       {
         "call": "git_panel_prompt",
-        "end_byte": 86463,
+        "end_byte": 86343,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 2410,
-        "start_byte": 86430
+        "line": 2406,
+        "start_byte": 86310
       }
     ],
     "status": "accepted"
@@ -32714,19 +32714,19 @@
     "occurrences": [
       {
         "call": "set_placeholder_text",
-        "end_byte": 38212,
+        "end_byte": 38032,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "placeholder",
-        "line": 1108,
-        "start_byte": 38190
+        "line": 1101,
+        "start_byte": 38010
       },
       {
         "call": "set_placeholder_text",
-        "end_byte": 181642,
+        "end_byte": 181522,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "placeholder",
-        "line": 4996,
-        "start_byte": 181620
+        "line": 4992,
+        "start_byte": 181500
       }
     ],
     "status": "accepted"
@@ -33773,11 +33773,11 @@
     "occurrences": [
       {
         "call": "child",
-        "end_byte": 217489,
+        "end_byte": 217369,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "child_text",
-        "line": 5933,
-        "start_byte": 217467
+        "line": 5929,
+        "start_byte": 217347
       }
     ],
     "status": "accepted"
@@ -34994,11 +34994,11 @@
     "occurrences": [
       {
         "call": "show_error",
-        "end_byte": 192072,
+        "end_byte": 191952,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "error_prompt",
-        "line": 5273,
-        "start_byte": 192030
+        "line": 5269,
+        "start_byte": 191910
       }
     ],
     "status": "accepted"
@@ -35195,11 +35195,11 @@
     "occurrences": [
       {
         "call": "render_history_placeholder",
-        "end_byte": 234651,
+        "end_byte": 234531,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "empty_state",
-        "line": 6336,
-        "start_byte": 234620
+        "line": 6332,
+        "start_byte": 234500
       }
     ],
     "status": "accepted"
@@ -35208,11 +35208,11 @@
     "occurrences": [
       {
         "call": "render_history_placeholder",
-        "end_byte": 235249,
+        "end_byte": 235129,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "empty_state",
-        "line": 6346,
-        "start_byte": 235225
+        "line": 6342,
+        "start_byte": 235105
       }
     ],
     "status": "accepted"
@@ -35889,11 +35889,11 @@
     "occurrences": [
       {
         "call": "detach_and_prompt_err",
-        "end_byte": 89232,
+        "end_byte": 89112,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "error_prompt",
-        "line": 2489,
-        "start_byte": 89209
+        "line": 2485,
+        "start_byte": 89089
       }
     ],
     "status": "accepted"
@@ -39830,11 +39830,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action",
-        "end_byte": 200344,
+        "end_byte": 200224,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5491,
-        "start_byte": 200319
+        "line": 5487,
+        "start_byte": 200199
       }
     ],
     "status": "accepted"
@@ -39869,11 +39869,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 198785,
+        "end_byte": 198665,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 5453,
-        "start_byte": 198763
+        "line": 5449,
+        "start_byte": 198643
       }
     ],
     "status": "accepted"
@@ -39882,11 +39882,11 @@
     "occurrences": [
       {
         "call": "configure_commit_button",
-        "end_byte": 205998,
+        "end_byte": 205878,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5626,
-        "start_byte": 205968
+        "line": 5622,
+        "start_byte": 205848
       }
     ],
     "status": "accepted"
@@ -40106,11 +40106,11 @@
     "occurrences": [
       {
         "call": "with_title",
-        "end_byte": 189074,
+        "end_byte": 188954,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "notification_title",
-        "line": 5201,
-        "start_byte": 189046
+        "line": 5197,
+        "start_byte": 188926
       }
     ],
     "status": "ignored"
@@ -40119,19 +40119,19 @@
     "occurrences": [
       {
         "call": "ProjectEmptyState::new",
-        "end_byte": 268408,
+        "end_byte": 268288,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "project_empty_state_label",
-        "line": 7031,
-        "start_byte": 268397
+        "line": 7027,
+        "start_byte": 268277
       },
       {
         "call": "icon_tooltip",
-        "end_byte": 325246,
+        "end_byte": 325126,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "panel_tooltip",
-        "line": 8457,
-        "start_byte": 325235
+        "line": 8453,
+        "start_byte": 325115
       },
       {
         "call": "SettingsPageItem::SectionHeader",
@@ -42500,11 +42500,11 @@
     "occurrences": [
       {
         "call": "git_panel_tab",
-        "end_byte": 233980,
+        "end_byte": 233860,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tab_title",
-        "line": 6322,
-        "start_byte": 233971
+        "line": 6318,
+        "start_byte": 233851
       },
       {
         "call": "strum::VariantNames",
@@ -44833,11 +44833,11 @@
     "occurrences": [
       {
         "call": "Button::new",
-        "end_byte": 267641,
+        "end_byte": 267521,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 7013,
-        "start_byte": 267618
+        "line": 7009,
+        "start_byte": 267498
       }
     ],
     "status": "accepted"
@@ -47668,11 +47668,11 @@
       },
       {
         "call": "Button::new",
-        "end_byte": 266688,
+        "end_byte": 266568,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 6995,
-        "start_byte": 266676
+        "line": 6991,
+        "start_byte": 266556
       },
       {
         "call": "Button::new",
@@ -48528,11 +48528,11 @@
     "occurrences": [
       {
         "call": "render_history_placeholder",
-        "end_byte": 234808,
+        "end_byte": 234688,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "empty_state",
-        "line": 6339,
-        "start_byte": 234781
+        "line": 6335,
+        "start_byte": 234661
       }
     ],
     "status": "accepted"
@@ -53895,11 +53895,11 @@
     "occurrences": [
       {
         "call": "Tooltip::simple",
-        "end_byte": 200220,
+        "end_byte": 200100,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5488,
-        "start_byte": 200198
+        "line": 5484,
+        "start_byte": 200078
       }
     ],
     "status": "accepted"
@@ -53934,11 +53934,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 267514,
+        "end_byte": 267394,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 7011,
-        "start_byte": 267493
+        "line": 7007,
+        "start_byte": 267373
       }
     ],
     "status": "accepted"
@@ -54143,35 +54143,35 @@
       },
       {
         "call": "git_user_error",
-        "end_byte": 115037,
+        "end_byte": 114917,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "notification_error",
-        "line": 3203,
-        "start_byte": 115015
+        "line": 3199,
+        "start_byte": 114895
       },
       {
         "call": "git_user_error",
-        "end_byte": 144069,
+        "end_byte": 143949,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "notification_error",
-        "line": 4028,
-        "start_byte": 144047
+        "line": 4024,
+        "start_byte": 143927
       },
       {
         "call": "git_user_error",
-        "end_byte": 148125,
+        "end_byte": 148005,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "notification_error",
-        "line": 4142,
-        "start_byte": 148103
+        "line": 4138,
+        "start_byte": 147983
       },
       {
         "call": "git_user_error",
-        "end_byte": 188635,
+        "end_byte": 188515,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "notification_error",
-        "line": 5188,
-        "start_byte": 188613
+        "line": 5184,
+        "start_byte": 188493
       }
     ],
     "status": "accepted"
@@ -54227,11 +54227,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 282961,
+        "end_byte": 282841,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 7373,
-        "start_byte": 282949
+        "line": 7369,
+        "start_byte": 282829
       }
     ],
     "status": "accepted"
@@ -54240,27 +54240,27 @@
     "occurrences": [
       {
         "call": "error_spawn",
-        "end_byte": 111755,
+        "end_byte": 111635,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "error_prompt",
-        "line": 3110,
-        "start_byte": 111733
+        "line": 3106,
+        "start_byte": 111613
       },
       {
         "call": "Label::new",
-        "end_byte": 264413,
+        "end_byte": 264293,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 6940,
-        "start_byte": 264391
+        "line": 6936,
+        "start_byte": 264271
       },
       {
         "call": "configure_commit_button",
-        "end_byte": 206261,
+        "end_byte": 206141,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5630,
-        "start_byte": 206239
+        "line": 5626,
+        "start_byte": 206119
       }
     ],
     "status": "accepted"
@@ -54295,11 +54295,11 @@
     "occurrences": [
       {
         "call": "configure_commit_button",
-        "end_byte": 206443,
+        "end_byte": 206323,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5634,
-        "start_byte": 206424
+        "line": 5630,
+        "start_byte": 206304
       }
     ],
     "status": "accepted"
@@ -54329,11 +54329,11 @@
     "occurrences": [
       {
         "call": "render_history_placeholder",
-        "end_byte": 234983,
+        "end_byte": 234863,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "empty_state",
-        "line": 6342,
-        "start_byte": 234967
+        "line": 6338,
+        "start_byte": 234847
       }
     ],
     "status": "accepted"
@@ -54941,11 +54941,11 @@
     "occurrences": [
       {
         "call": "render_history_placeholder",
-        "end_byte": 234491,
+        "end_byte": 234371,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "empty_state",
-        "line": 6333,
-        "start_byte": 234470
+        "line": 6329,
+        "start_byte": 234350
       }
     ],
     "status": "accepted"
@@ -55019,11 +55019,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 282874,
+        "end_byte": 282754,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 7371,
-        "start_byte": 282851
+        "line": 7367,
+        "start_byte": 282731
       }
     ],
     "status": "accepted"
@@ -55191,11 +55191,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 282930,
+        "end_byte": 282810,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 7372,
-        "start_byte": 282909
+        "line": 7368,
+        "start_byte": 282789
       },
       {
         "call": "DiffMultibuffer::new",
@@ -55849,19 +55849,19 @@
       },
       {
         "call": "prompt",
-        "end_byte": 110157,
+        "end_byte": 110037,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_answer",
-        "line": 3065,
-        "start_byte": 110153
+        "line": 3061,
+        "start_byte": 110033
       },
       {
         "call": "prompt",
-        "end_byte": 134868,
+        "end_byte": 134748,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_answer",
-        "line": 3762,
-        "start_byte": 134864
+        "line": 3758,
+        "start_byte": 134744
       },
       {
         "call": "prompt",
@@ -56805,11 +56805,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action",
-        "end_byte": 216762,
+        "end_byte": 216642,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5916,
-        "start_byte": 216743
+        "line": 5912,
+        "start_byte": 216623
       }
     ],
     "status": "accepted"
@@ -56857,11 +56857,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 286256,
+        "end_byte": 286136,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7462,
-        "start_byte": 286245
+        "line": 7458,
+        "start_byte": 286125
       }
     ],
     "status": "accepted"
@@ -56981,11 +56981,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 286327,
+        "end_byte": 286207,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7463,
-        "start_byte": 286311
+        "line": 7459,
+        "start_byte": 286191
       }
     ],
     "status": "accepted"
@@ -57080,11 +57080,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action",
-        "end_byte": 231016,
+        "end_byte": 230896,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 6244,
-        "start_byte": 231000
+        "line": 6240,
+        "start_byte": 230880
       }
     ],
     "status": "accepted"
@@ -57748,11 +57748,11 @@
     "occurrences": [
       {
         "call": "prompt",
-        "end_byte": 134843,
+        "end_byte": 134723,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_detail",
-        "line": 3761,
-        "start_byte": 134819
+        "line": 3757,
+        "start_byte": 134699
       }
     ],
     "status": "accepted"
@@ -61540,11 +61540,11 @@
     "occurrences": [
       {
         "call": "picker_prompt::prompt",
-        "end_byte": 131503,
+        "end_byte": 131383,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "picker_prompt",
-        "line": 3661,
-        "start_byte": 131475
+        "line": 3657,
+        "start_byte": 131355
       }
     ],
     "status": "accepted"
@@ -61553,11 +61553,11 @@
     "occurrences": [
       {
         "call": "picker_prompt::prompt",
-        "end_byte": 148975,
+        "end_byte": 148855,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "picker_prompt",
-        "line": 4162,
-        "start_byte": 148945
+        "line": 4158,
+        "start_byte": 148825
       }
     ],
     "status": "accepted"
@@ -65365,11 +65365,11 @@
     "occurrences": [
       {
         "call": "git_panel_coauthor_tooltip",
-        "end_byte": 200837,
+        "end_byte": 200717,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5507,
-        "start_byte": 200814
+        "line": 5503,
+        "start_byte": 200694
       }
     ],
     "status": "accepted"
@@ -67437,19 +67437,19 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 285008,
+        "end_byte": 284888,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7434,
-        "start_byte": 284994
+        "line": 7430,
+        "start_byte": 284874
       },
       {
         "call": "git_panel_prompt_answer",
-        "end_byte": 77334,
+        "end_byte": 77214,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_answer",
-        "line": 2132,
-        "start_byte": 77320
+        "line": 2128,
+        "start_byte": 77200
       },
       {
         "call": "action",
@@ -71378,11 +71378,11 @@
       },
       {
         "call": "Button::new",
-        "end_byte": 314769,
+        "end_byte": 314649,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 8202,
-        "start_byte": 314759
+        "line": 8198,
+        "start_byte": 314639
       },
       {
         "call": "WorkspaceError.action",
@@ -78158,11 +78158,11 @@
       },
       {
         "call": "toggleable_entry",
-        "end_byte": 204503,
+        "end_byte": 204383,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_entry",
-        "line": 5593,
-        "start_byte": 204494
+        "line": 5589,
+        "start_byte": 204374
       }
     ],
     "status": "accepted"
@@ -78440,11 +78440,11 @@
       },
       {
         "call": "ContextMenuEntry::new",
-        "end_byte": 204884,
+        "end_byte": 204764,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_entry",
-        "line": 5600,
-        "start_byte": 204872
+        "line": 5596,
+        "start_byte": 204752
       }
     ],
     "status": "accepted"
@@ -79569,11 +79569,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 210007,
+        "end_byte": 209887,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 5741,
-        "start_byte": 209996
+        "line": 5737,
+        "start_byte": 209876
       },
       {
         "call": "Button::new",
@@ -79635,11 +79635,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 284796,
+        "end_byte": 284676,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7427,
-        "start_byte": 284784
+        "line": 7423,
+        "start_byte": 284664
       }
     ],
     "status": "accepted"
@@ -79750,11 +79750,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 285576,
+        "end_byte": 285456,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7446,
-        "start_byte": 285560
+        "line": 7442,
+        "start_byte": 285440
       },
       {
         "call": "tab_tooltip_text",
@@ -81986,11 +81986,11 @@
     "occurrences": [
       {
         "call": "Tooltip::simple",
-        "end_byte": 332559,
+        "end_byte": 332439,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 8676,
-        "start_byte": 332533
+        "line": 8672,
+        "start_byte": 332413
       }
     ],
     "status": "accepted"
@@ -82007,11 +82007,11 @@
       },
       {
         "call": "Tooltip::for_action_title",
-        "end_byte": 333562,
+        "end_byte": 333442,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 8703,
-        "start_byte": 333547
+        "line": 8699,
+        "start_byte": 333427
       }
     ],
     "status": "accepted"
@@ -86739,11 +86739,11 @@
     "occurrences": [
       {
         "call": "error_spawn",
-        "end_byte": 110439,
+        "end_byte": 110319,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "error_prompt",
-        "line": 3074,
-        "start_byte": 110372
+        "line": 3070,
+        "start_byte": 110252
       }
     ],
     "status": "accepted"
@@ -87221,11 +87221,11 @@
     "occurrences": [
       {
         "call": "prompt",
-        "end_byte": 115611,
+        "end_byte": 115491,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 3219,
-        "start_byte": 115572
+        "line": 3215,
+        "start_byte": 115452
       }
     ],
     "status": "accepted"
@@ -88041,11 +88041,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 226345,
+        "end_byte": 226225,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 6139,
-        "start_byte": 226302
+        "line": 6135,
+        "start_byte": 226182
       }
     ],
     "status": "accepted"
@@ -89335,11 +89335,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action_title",
-        "end_byte": 232971,
+        "end_byte": 232851,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 6292,
-        "start_byte": 232956
+        "line": 6288,
+        "start_byte": 232836
       }
     ],
     "status": "accepted"
@@ -91534,11 +91534,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 284935,
+        "end_byte": 284815,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7432,
-        "start_byte": 284923
+        "line": 7428,
+        "start_byte": 284803
       }
     ],
     "status": "accepted"
@@ -91560,11 +91560,11 @@
     "occurrences": [
       {
         "call": "git_panel_prompt",
-        "end_byte": 87999,
+        "end_byte": 87879,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 2460,
-        "start_byte": 87979
+        "line": 2456,
+        "start_byte": 87859
       }
     ],
     "status": "accepted"
@@ -91740,11 +91740,11 @@
     "occurrences": [
       {
         "call": "Button::new",
-        "end_byte": 265959,
+        "end_byte": 265839,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 6981,
-        "start_byte": 265942
+        "line": 6977,
+        "start_byte": 265822
       }
     ],
     "status": "accepted"
@@ -92102,11 +92102,11 @@
     "occurrences": [
       {
         "call": "prompt",
-        "end_byte": 134796,
+        "end_byte": 134676,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 3760,
-        "start_byte": 134757
+        "line": 3756,
+        "start_byte": 134637
       }
     ],
     "status": "accepted"
@@ -92154,11 +92154,11 @@
     "occurrences": [
       {
         "call": "Tooltip::with_meta",
-        "end_byte": 229839,
+        "end_byte": 229719,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 6222,
-        "start_byte": 229829
+        "line": 6218,
+        "start_byte": 229709
       }
     ],
     "status": "accepted"
@@ -93072,11 +93072,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 210099,
+        "end_byte": 209979,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 5743,
-        "start_byte": 210086
+        "line": 5739,
+        "start_byte": 209966
       },
       {
         "call": "Button::new",
@@ -93138,11 +93138,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 284840,
+        "end_byte": 284720,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7429,
-        "start_byte": 284826
+        "line": 7425,
+        "start_byte": 284706
       }
     ],
     "status": "accepted"
@@ -93227,11 +93227,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 285499,
+        "end_byte": 285379,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7445,
-        "start_byte": 285481
+        "line": 7441,
+        "start_byte": 285361
       },
       {
         "call": "tab_tooltip_text",
@@ -93410,11 +93410,11 @@
     "occurrences": [
       {
         "call": "suggest_commit_message_action",
-        "end_byte": 117022,
+        "end_byte": 116902,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "commit_message_prefix",
-        "line": 3259,
-        "start_byte": 117014
+        "line": 3255,
+        "start_byte": 116894
       }
     ],
     "status": "accepted"
@@ -95239,11 +95239,11 @@
     "occurrences": [
       {
         "call": "Button::new",
-        "end_byte": 264579,
+        "end_byte": 264459,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "button",
-        "line": 6943,
-        "start_byte": 264561
+        "line": 6939,
+        "start_byte": 264441
       }
     ],
     "status": "accepted"
@@ -95286,11 +95286,11 @@
     "occurrences": [
       {
         "call": "Tooltip::with_meta",
-        "end_byte": 260349,
+        "end_byte": 260229,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 6861,
-        "start_byte": 260331
+        "line": 6857,
+        "start_byte": 260211
       }
     ],
     "status": "accepted"
@@ -95333,19 +95333,19 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 212366,
+        "end_byte": 212246,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 5806,
-        "start_byte": 212355
+        "line": 5802,
+        "start_byte": 212235
       },
       {
         "call": "Tooltip::for_action_title",
-        "end_byte": 213315,
+        "end_byte": 213195,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5823,
-        "start_byte": 213304
+        "line": 5819,
+        "start_byte": 213184
       }
     ],
     "status": "accepted"
@@ -95380,11 +95380,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 286402,
+        "end_byte": 286282,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7464,
-        "start_byte": 286391
+        "line": 7460,
+        "start_byte": 286271
       },
       {
         "call": "strum::VariantNames",
@@ -95409,11 +95409,11 @@
       },
       {
         "call": "action",
-        "end_byte": 286601,
+        "end_byte": 286481,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 7468,
-        "start_byte": 286582
+        "line": 7464,
+        "start_byte": 286462
       }
     ],
     "status": "accepted"
@@ -95448,11 +95448,11 @@
     "occurrences": [
       {
         "call": "action",
-        "end_byte": 193949,
+        "end_byte": 193829,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "context_menu_action",
-        "line": 5318,
-        "start_byte": 193939
+        "line": 5314,
+        "start_byte": 193819
       },
       {
         "call": "action",
@@ -95508,11 +95508,11 @@
     "occurrences": [
       {
         "call": "Tooltip::text",
-        "end_byte": 197404,
+        "end_byte": 197284,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5417,
-        "start_byte": 197390
+        "line": 5413,
+        "start_byte": 197270
       }
     ],
     "status": "accepted"
@@ -97839,11 +97839,11 @@
     "occurrences": [
       {
         "call": "picker_prompt::prompt",
-        "end_byte": 135881,
+        "end_byte": 135761,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "picker_prompt",
-        "line": 3788,
-        "start_byte": 135824
+        "line": 3784,
+        "start_byte": 135704
       }
     ],
     "status": "accepted"
@@ -103212,11 +103212,11 @@
     "occurrences": [
       {
         "call": "configure_commit_button",
-        "end_byte": 206558,
+        "end_byte": 206438,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5636,
-        "start_byte": 206512
+        "line": 5632,
+        "start_byte": 206392
       }
     ],
     "status": "accepted"
@@ -103381,11 +103381,11 @@
     "occurrences": [
       {
         "call": "configure_commit_button",
-        "end_byte": 206116,
+        "end_byte": 205996,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5628,
-        "start_byte": 206070
+        "line": 5624,
+        "start_byte": 205950
       }
     ],
     "status": "accepted"
@@ -106711,11 +106711,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action_title",
-        "end_byte": 210054,
+        "end_byte": 209934,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5741,
-        "start_byte": 210039
+        "line": 5737,
+        "start_byte": 209919
       }
     ],
     "status": "ignored"
@@ -106732,11 +106732,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 205387,
+        "end_byte": 205267,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 5607,
-        "start_byte": 205363
+        "line": 5603,
+        "start_byte": 205243
       }
     ],
     "status": "ignored"
@@ -106753,11 +106753,11 @@
       },
       {
         "call": "Tooltip::with_meta",
-        "end_byte": 224854,
+        "end_byte": 224734,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip_meta",
-        "line": 6102,
-        "start_byte": 224836
+        "line": 6098,
+        "start_byte": 224716
       }
     ],
     "status": "ignored"
@@ -106766,11 +106766,11 @@
     "occurrences": [
       {
         "call": "Tooltip::text",
-        "end_byte": 266277,
+        "end_byte": 266157,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 6986,
-        "start_byte": 266232
+        "line": 6982,
+        "start_byte": 266112
       }
     ],
     "status": "ignored"
@@ -106792,11 +106792,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action_title",
-        "end_byte": 267852,
+        "end_byte": 267732,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 7017,
-        "start_byte": 267842
+        "line": 7013,
+        "start_byte": 267722
       }
     ],
     "status": "ignored"
@@ -106805,11 +106805,11 @@
     "occurrences": [
       {
         "call": "SharedString::from",
-        "end_byte": 369184,
+        "end_byte": 369064,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "shared_string",
-        "line": 9698,
-        "start_byte": 369168
+        "line": 9694,
+        "start_byte": 369048
       }
     ],
     "status": "ignored"
@@ -106831,11 +106831,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action_title",
-        "end_byte": 210145,
+        "end_byte": 210025,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5743,
-        "start_byte": 210134
+        "line": 5739,
+        "start_byte": 210014
       }
     ],
     "status": "ignored"
@@ -106844,11 +106844,11 @@
     "occurrences": [
       {
         "call": "Tooltip::with_meta",
-        "end_byte": 230160,
+        "end_byte": 230040,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip_meta",
-        "line": 6227,
-        "start_byte": 230143
+        "line": 6223,
+        "start_byte": 230023
       }
     ],
     "status": "ignored"
@@ -106857,11 +106857,11 @@
     "occurrences": [
       {
         "call": "Tooltip::with_meta",
-        "end_byte": 230041,
+        "end_byte": 229921,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip_meta",
-        "line": 6225,
-        "start_byte": 230017
+        "line": 6221,
+        "start_byte": 229897
       }
     ],
     "status": "ignored"
@@ -111967,11 +111967,11 @@
     "occurrences": [
       {
         "call": "Tooltip::simple",
-        "end_byte": 305478,
+        "end_byte": 305358,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 7943,
-        "start_byte": 305461
+        "line": 7939,
+        "start_byte": 305341
       }
     ],
     "status": "accepted"
@@ -112170,11 +112170,11 @@
     "occurrences": [
       {
         "call": "show_error",
-        "end_byte": 46400,
+        "end_byte": 46220,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "error_prompt",
-        "line": 1282,
-        "start_byte": 46391
+        "line": 1275,
+        "start_byte": 46211
       },
       {
         "call": "show_error",
@@ -114290,11 +114290,11 @@
     "occurrences": [
       {
         "call": "tooltip",
-        "end_byte": 201434,
+        "end_byte": 201314,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "tooltip",
-        "line": 5523,
-        "start_byte": 201425
+        "line": 5519,
+        "start_byte": 201305
       }
     ],
     "status": "ignored"
@@ -114376,11 +114376,11 @@
     "occurrences": [
       {
         "call": "git_panel_prompt_format",
-        "end_byte": 77686,
+        "end_byte": 77566,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "prompt_message",
-        "line": 2142,
-        "start_byte": 77679
+        "line": 2138,
+        "start_byte": 77559
       }
     ],
     "status": "ignored"
@@ -114528,11 +114528,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 249919,
+        "end_byte": 249799,
         "file": "crates/git_ui/src/git_panel.rs",
         "kind": "label",
-        "line": 6713,
-        "start_byte": 249914
+        "line": 6709,
+        "start_byte": 249794
       },
       {
         "call": "Label::new",
