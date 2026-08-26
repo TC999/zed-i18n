@@ -71,7 +71,7 @@ PATCH_TARGETS = (
 class RuntimeOverlayPatchTests(unittest.TestCase):
     def setUp(self) -> None:
         self.root = Path.cwd()
-        self.source = self.root / ".cache" / "zed" / "v1.15.0-clean-extract"
+        self.source = self.root / ".cache" / "zed" / "v1.17.2-clean-extract"
         if not self.source.exists():
             self.skipTest(f"clean Zed checkout not available: {self.source}")
         self.temp_root = self.root / "tests" / ".tmp" / self._testMethodName

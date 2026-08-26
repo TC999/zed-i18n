@@ -76,6 +76,7 @@ _KNOWN_KINDS = {
     "documentation_aside",
     "dropdown_label",
     "edit_prediction_popover",
+    "elicitation_field_title",
     "elicitation_validation_error",
     "empty_state",
     "error_detail",
@@ -194,6 +195,7 @@ _KNOWN_KINDS = {
     "status_label",
     "status_message",
     "status_toast",
+    "status_toast_fragment",
     "switch_description",
     "switch_label",
     "tab_title",
@@ -918,8 +920,8 @@ fn observe_text(text: &str) {
 '''
     patch(
         "crates/auto_update_helper/src/auto_update_helper.rs",
-        "    fn parse_args(input: impl IntoIterator<Item = String>) -> Args {\n",
-        helper_init + "    fn parse_args(input: impl IntoIterator<Item = String>) -> Args {\n",
+        "    fn parse_args(input: impl IntoIterator<Item = OsString>) -> Args {\n",
+        helper_init + "    fn parse_args(input: impl IntoIterator<Item = OsString>) -> Args {\n",
     )
     patch(
         "crates/auto_update_helper/src/auto_update_helper.rs",

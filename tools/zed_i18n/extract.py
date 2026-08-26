@@ -89,6 +89,7 @@ CALL_RULES: dict[str, tuple[int, str, str]] = {
         "ProjectEmptyState::new",
     ),
     "render_mermaid_tab_button": (0, "tab_title", "render_mermaid_tab_button"),
+    "with_copy_on_right_click": (2, "tooltip", "with_copy_on_right_click"),
 }
 
 STRUCT_FIELD_RULES: dict[tuple[str, str], tuple[str, str]] = {
@@ -108,6 +109,7 @@ STRUCT_FIELD_RULES: dict[tuple[str, str], tuple[str, str]] = {
     ),
     ("PathPromptOptions", "prompt"): ("path_prompt", "PathPromptOptions.prompt"),
     ("Content", "message"): ("content_message", "Content.message"),
+    ("Content", "tooltip_message"): ("tooltip", "Content.tooltip_message"),
     ("FastModeConfirmation", "title"): (
         "fast_mode_confirmation_title",
         "FastModeConfirmation.title",
@@ -615,8 +617,22 @@ PROJECT_PANEL_UNDO_ERROR_SOURCES = {
     "Failed to restore `{name}`. It may have been permanently deleted.",
 }
 
-CSV_FILTER_LIST_HEADER_SOURCES = {
+TABULAR_DATA_FILTER_LIST_HEADER_SOURCES = {
     "Hidden by other filters",
+}
+
+ASK_USER_TOOL_ANSWERED_TITLE_SOURCES = {
+    "Answered: {selected}",
+}
+
+ASK_USER_TOOL_FIELD_TITLE_SOURCES = {
+    "Choose an option",
+    "Your answer",
+    "Or type your own answer",
+}
+
+QUICK_ACTION_PREVIEW_TOOLTIP_SOURCES = {
+    "Preview Tabular Data",
 }
 
 BASE_KEYMAP_OPTION_SOURCES = {
@@ -1081,6 +1097,11 @@ def _rules_for_call(call: str) -> tuple[tuple[int, str, str], ...]:
 
 def _contextual_rules_for_call(call: str, relative_path: str) -> tuple[tuple[int, str, str], ...]:
     canonical = _canonical_call(call)
+    if (
+        relative_path == "crates/editor/src/git.rs"
+        and _is_method_call(canonical, "show_blame_revision_toast")
+    ):
+        return ((0, "toast", "show_blame_revision_toast"),)
     if _is_announcement_path(relative_path) and _is_bullet_items_push_call(canonical):
         return ((0, "announcement_bullet", "announcement_bullet"),)
     if _is_skills_illustration_path(relative_path) and canonical == "skill_crease":
@@ -1349,6 +1370,8 @@ def _extract_ui_return_method_occurrences(source_bytes: bytes, node, relative_pa
         rule = ("dock_position_label", "DockPosition.label")
     if rule is None and _is_agent_tool_path(relative_path) and method_name == "initial_title":
         rule = ("agent_tool_title", "initial_title")
+    if rule is None and _is_git_panel_path(relative_path) and method_name == "error_action":
+        rule = ("status_toast_fragment", "StashKind.error_action")
     if (
         rule is None
         and relative_path == "crates/agent/src/tools/context_server_registry.rs"
@@ -1368,7 +1391,7 @@ def _extract_ui_return_method_occurrences(source_bytes: bytes, node, relative_pa
             rule = ("empty_state", "LspPickerKind.empty_message")
     if (
         rule is None
-        and relative_path == "crates/csv_preview/src/renderer/table_header.rs"
+        and relative_path == "crates/tabular_data_preview/src/renderer/table_header.rs"
         and method_name == "format_filter_label"
     ):
         rule = ("context_menu_entry", "format_filter_label")
@@ -2131,6 +2154,29 @@ def _allowed_literal_rules_for_path(
     relative_path: str,
 ) -> list[tuple[set[str], str, str]]:
     rules: list[tuple[set[str], str, str]] = []
+    if relative_path == "crates/agent/src/tools/ask_user_tool.rs":
+        rules.append(
+            (
+                ASK_USER_TOOL_ANSWERED_TITLE_SOURCES,
+                "agent_tool_title",
+                "AskUserTool.answered_title",
+            )
+        )
+        rules.append(
+            (
+                ASK_USER_TOOL_FIELD_TITLE_SOURCES,
+                "elicitation_field_title",
+                "AskUserTool.field_title",
+            )
+        )
+    if relative_path == "crates/zed/src/zed/quick_action_bar/preview.rs":
+        rules.append(
+            (
+                QUICK_ACTION_PREVIEW_TOOLTIP_SOURCES,
+                "tooltip",
+                "QuickActionBar.preview",
+            )
+        )
     if relative_path == "crates/agent_ui/src/conversation_view/thread_view.rs":
         rules.append(
             (
@@ -2162,10 +2208,10 @@ def _allowed_literal_rules_for_path(
                 "ProjectPanel.undo_error",
             )
         )
-    if relative_path == "crates/csv_preview/src/renderer/table_header.rs":
+    if relative_path == "crates/tabular_data_preview/src/renderer/table_header.rs":
         rules.append(
             (
-                CSV_FILTER_LIST_HEADER_SOURCES,
+                TABULAR_DATA_FILTER_LIST_HEADER_SOURCES,
                 "picker_section_header",
                 "ColumnFilterListEntry::Header",
             )

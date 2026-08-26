@@ -416,6 +416,36 @@ class UniversalApplyTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unrecognized occurrence kind"):
             build_handling_map(self.zed_root, manifest)
 
+    def test_accepts_current_extractor_runtime_kinds(self) -> None:
+        source = "\n".join(
+            [
+                'fn render() { Label::new("Choose an option"); }',
+                'fn error_action() -> &\'static str { "stash tracked" }',
+            ]
+        )
+        path = self._write_source("crates/demo/src/lib.rs", source)
+        manifest = {
+            "Choose an option": self._entry(
+                path,
+                source,
+                '"Choose an option"',
+                1,
+                "elicitation_field_title",
+            ),
+            "stash tracked": self._entry(
+                path,
+                source,
+                '"stash tracked"',
+                2,
+                "status_toast_fragment",
+            ),
+        }
+
+        report = build_handling_map(self.zed_root, manifest)
+
+        self.assertEqual(report.kind_count, 2)
+        self.assertEqual(report.class_counts, {"rewrite_static": 2})
+
     def test_validates_rust_string_line_continuations_like_the_extractor(self) -> None:
         source = 'fn render() { Label::new("First \\\n                              second"); }\n'
         path = self._write_source("crates/demo/src/lib.rs", source)

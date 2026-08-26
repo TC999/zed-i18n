@@ -1585,12 +1585,13 @@ class ExtractTests(unittest.TestCase):
             },
         )
 
-    def test_extracts_activity_indicator_content_messages(self) -> None:
+    def test_extracts_activity_indicator_content_messages_and_tooltips(self) -> None:
         source = "\n".join(
             [
                 "fn content() -> Content {",
                 "    Content {",
                 '        message: format!("Downloading {}...", name),',
+                '        tooltip_message: Some("Directories outside of git repositories and deeper than the `file_scan_depth` setting will be indexed on demand.".to_string()),',
                 "    }",
                 "}",
             ]
@@ -1602,8 +1603,26 @@ class ExtractTests(unittest.TestCase):
         )
 
         by_source = {occurrence.source: occurrence for occurrence in occurrences}
-        self.assertEqual(set(by_source), {"Downloading {}..."})
+        self.assertEqual(
+            set(by_source),
+            {
+                "Downloading {}...",
+                "Directories outside of git repositories and deeper than the `file_scan_depth` setting will be indexed on demand.",
+            },
+        )
         self.assertEqual(by_source["Downloading {}..."].call, "Content.message")
+        self.assertEqual(
+            by_source[
+                "Directories outside of git repositories and deeper than the `file_scan_depth` setting will be indexed on demand."
+            ].call,
+            "Content.tooltip_message",
+        )
+        self.assertEqual(
+            by_source[
+                "Directories outside of git repositories and deeper than the `file_scan_depth` setting will be indexed on demand."
+            ].kind,
+            "tooltip",
+        )
 
     def test_extracts_activity_indicator_dynamic_status_messages(self) -> None:
         source = "\n".join(
@@ -3593,6 +3612,38 @@ class ExtractTests(unittest.TestCase):
         self.assertEqual(by_source["No clipboard content available"].call, "show_deferred_toast")
         self.assertEqual(by_source["Show in File Manager"].kind, "notification_action")
 
+    def test_extracts_editor_blame_revision_toasts(self) -> None:
+        source = "\n".join(
+            [
+                "fn blame_revision(&mut self, cx: &mut Context<Self>) {",
+                '    self.show_blame_revision_toast("No blame entry for this line", cx);',
+                '    self.show_blame_revision_toast("Cannot blame revision: the line is not committed", cx);',
+                '    self.show_blame_revision_toast("Already blaming at this revision", cx);',
+                '    self.show_blame_revision_toast("No previous revision for this line", cx);',
+                "}",
+            ]
+        )
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/editor/src/git.rs",
+        )
+
+        by_source = {occurrence.source: occurrence for occurrence in occurrences}
+        self.assertEqual(
+            set(by_source),
+            {
+                "No blame entry for this line",
+                "Cannot blame revision: the line is not committed",
+                "Already blaming at this revision",
+                "No previous revision for this line",
+            },
+        )
+        self.assertTrue(all(item.kind == "toast" for item in by_source.values()))
+        self.assertTrue(
+            all(item.call == "show_blame_revision_toast" for item in by_source.values())
+        )
+
     def test_extracts_agent_tool_initial_titles_without_json_lookup_keys(self) -> None:
         source = "\n".join(
             [
@@ -3632,6 +3683,42 @@ class ExtractTests(unittest.TestCase):
             by_source["Get page {page} of search results for regex {regex_str}"].call,
             "initial_title",
         )
+
+    def test_extracts_ask_user_tool_visible_form_copy_only(self) -> None:
+        source = "\n".join(
+            [
+                "fn update(selected: &str) {",
+                '    let _ = format!("Answered: {selected}");',
+                '    let _ = acp::StringPropertySchema::new().title("Choose an option");',
+                '    let title = if options.is_empty() { "Your answer" } else { "Or type your own answer" };',
+                '    let model_error = "The user declined to answer the question.";',
+                "}",
+            ]
+        )
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/agent/src/tools/ask_user_tool.rs",
+        )
+
+        by_source = {occurrence.source: occurrence for occurrence in occurrences}
+        self.assertEqual(
+            set(by_source),
+            {
+                "Answered: {selected}",
+                "Choose an option",
+                "Your answer",
+                "Or type your own answer",
+            },
+        )
+        self.assertEqual(by_source["Answered: {selected}"].kind, "agent_tool_title")
+        self.assertTrue(
+            all(
+                by_source[source].kind == "elicitation_field_title"
+                for source in {"Choose an option", "Your answer", "Or type your own answer"}
+            )
+        )
+        self.assertNotIn("The user declined to answer the question.", by_source)
 
     def test_extracts_fast_mode_confirmation_copy(self) -> None:
         source = "\n".join(
@@ -6388,7 +6475,7 @@ class ExtractTests(unittest.TestCase):
             )
         )
 
-    def test_extracts_csv_filter_label_formatter(self) -> None:
+    def test_extracts_tabular_data_filter_label_formatter(self) -> None:
         source = "\n".join(
             [
                 "fn format_filter_label(value: Option<&str>, count: usize) -> String {",
@@ -6402,12 +6489,47 @@ class ExtractTests(unittest.TestCase):
 
         occurrences = extract_ui_strings_from_source(
             source,
-            relative_path="crates/csv_preview/src/renderer/table_header.rs",
+            relative_path="crates/tabular_data_preview/src/renderer/table_header.rs",
         )
 
         self.assertEqual(
             {occurrence.source for occurrence in occurrences},
             {"{s} ({count})", "<null> ({count})"},
+        )
+
+    def test_extracts_tabular_data_copy_tooltips(self) -> None:
+        cases = (
+            (
+                "crates/tabular_data_preview/src/renderer/table_cell.rs",
+                'with_copy_on_right_click(cell, content, "Right click to copy content");',
+                "Right click to copy content",
+            ),
+            (
+                "crates/tabular_data_preview/src/renderer/table_header.rs",
+                'with_copy_on_right_click(cell, header, "Right click to copy column name");',
+                "Right click to copy column name",
+            ),
+        )
+
+        for relative_path, source, expected in cases:
+            with self.subTest(relative_path=relative_path):
+                occurrences = extract_ui_strings_from_source(source, relative_path=relative_path)
+                self.assertEqual(
+                    [(item.source, item.call, item.kind) for item in occurrences],
+                    [(expected, "with_copy_on_right_click", "tooltip")],
+                )
+
+    def test_extracts_tabular_data_quick_action_tooltip(self) -> None:
+        source = '("toggle-tabular-preview", "Preview Tabular Data", &OpenPreview);'
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/zed/src/zed/quick_action_bar/preview.rs",
+        )
+
+        self.assertEqual(
+            [(item.source, item.call, item.kind) for item in occurrences],
+            [("Preview Tabular Data", "QuickActionBar.preview", "tooltip")],
         )
 
     def test_extracts_text_finder_open_multiple_action(self) -> None:
@@ -6712,7 +6834,7 @@ class ExtractTests(unittest.TestCase):
             },
         )
 
-    def test_extracts_csv_filter_header_stored_in_list_entry(self) -> None:
+    def test_extracts_tabular_data_filter_header_stored_in_list_entry(self) -> None:
         source = "\n".join(
             [
                 "fn build_entries() {",
@@ -6725,12 +6847,41 @@ class ExtractTests(unittest.TestCase):
 
         occurrences = extract_ui_strings_from_source(
             source,
-            relative_path="crates/csv_preview/src/renderer/table_header.rs",
+            relative_path="crates/tabular_data_preview/src/renderer/table_header.rs",
         )
 
         self.assertEqual(
             {occurrence.source for occurrence in occurrences},
             {"Hidden by other filters"},
+        )
+
+    def test_extracts_git_panel_stash_error_action_fragments(self) -> None:
+        source = "\n".join(
+            [
+                "impl StashKind {",
+                "    fn error_action(self) -> &'static str {",
+                "        match self {",
+                '            StashKind::All => "stash",',
+                '            StashKind::Tracked => "stash tracked",',
+                '            StashKind::Staged => "stash staged",',
+                "        }",
+                "    }",
+                "}",
+            ]
+        )
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/git_ui/src/git_panel.rs",
+        )
+
+        by_source = {occurrence.source: occurrence for occurrence in occurrences}
+        self.assertEqual(set(by_source), {"stash", "stash tracked", "stash staged"})
+        self.assertTrue(
+            all(item.call == "StashKind.error_action" for item in by_source.values())
+        )
+        self.assertTrue(
+            all(item.kind == "status_toast_fragment" for item in by_source.values())
         )
 
     def test_extracts_default_base_keymap_option(self) -> None:
