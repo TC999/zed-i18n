@@ -6341,6 +6341,19 @@
     ],
     "status": "accepted"
   },
+  "Agent Servers": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 15964,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 432,
+        "start_byte": 15949
+      }
+    ],
+    "status": "needs_review"
+  },
   "Agent Setup": {
     "occurrences": [
       {
@@ -21279,6 +21292,19 @@
       }
     ],
     "status": "accepted"
+  },
+  "Debug Adapters": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 16216,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 436,
+        "start_byte": 16200
+      }
+    ],
+    "status": "needs_review"
   },
   "Debug Panel": {
     "occurrences": [
@@ -41497,6 +41523,19 @@
     ],
     "status": "accepted"
   },
+  "Grammars": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 15778,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 429,
+        "start_byte": 15768
+      }
+    ],
+    "status": "needs_review"
+  },
   "Grant Mic Access": {
     "occurrences": [
       {
@@ -43522,6 +43561,19 @@
     ],
     "status": "accepted"
   },
+  "Icon Themes": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 15674,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 427,
+        "start_byte": 15661
+      }
+    ],
+    "status": "needs_review"
+  },
   "Icon Themes…": {
     "occurrences": [
       {
@@ -44560,6 +44612,19 @@
       }
     ],
     "status": "accepted"
+  },
+  "Indexed Docs Providers": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 16103,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 434,
+        "start_byte": 16079
+      }
+    ],
+    "status": "needs_review"
   },
   "Indicates a changed or altered status, like a file that has been edited.": {
     "occurrences": [
@@ -47244,6 +47309,14 @@
   "Language Servers": {
     "occurrences": [
       {
+        "call": "extension_provides_label",
+        "end_byte": 15844,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 430,
+        "start_byte": 15826
+      },
+      {
         "call": "aria_label",
         "end_byte": 59523,
         "file": "crates/language_tools/src/lsp_button.rs",
@@ -47345,6 +47418,14 @@
   },
   "Languages": {
     "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 15727,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 428,
+        "start_byte": 15716
+      },
       {
         "call": "SettingsPageItem::SectionHeader",
         "end_byte": 161629,
@@ -49058,6 +49139,14 @@
         "kind": "context_menu_header",
         "line": 5660,
         "start_byte": 213423
+      },
+      {
+        "call": "extension_provides_label",
+        "end_byte": 15904,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 431,
+        "start_byte": 15891
       },
       {
         "call": "SubPageLink.title",
@@ -78449,6 +78538,19 @@
     ],
     "status": "accepted"
   },
+  "Slash Commands": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 16026,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 433,
+        "start_byte": 16010
+      }
+    ],
+    "status": "needs_review"
+  },
   "Small": {
     "occurrences": [
       {
@@ -78573,6 +78675,19 @@
       }
     ],
     "status": "accepted"
+  },
+  "Snippets": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 16154,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 435,
+        "start_byte": 16144
+      }
+    ],
+    "status": "needs_review"
   },
   "Soft Wrap": {
     "occurrences": [
@@ -86721,6 +86836,19 @@
       }
     ],
     "status": "accepted"
+  },
+  "Themes": {
+    "occurrences": [
+      {
+        "call": "extension_provides_label",
+        "end_byte": 15618,
+        "file": "crates/extensions_ui/src/components/extension_card.rs",
+        "kind": "extension_provides_label",
+        "line": 426,
+        "start_byte": 15610
+      }
+    ],
+    "status": "needs_review"
   },
   "Themes…": {
     "occurrences": [
