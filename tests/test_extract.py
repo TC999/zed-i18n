@@ -2302,6 +2302,51 @@ class ExtractTests(unittest.TestCase):
             {"Left", "Bottom", "Right"},
         )
 
+    def test_extracts_extension_provides_labels(self) -> None:
+        source = "\n".join(
+            [
+                "pub(crate) fn extension_provides_label(provides: ExtensionProvides) -> &'static str {",
+                "    match provides {",
+                '        ExtensionProvides::Themes => "Themes",',
+                '        ExtensionProvides::IconThemes => "Icon Themes",',
+                '        ExtensionProvides::Languages => "Languages",',
+                '        ExtensionProvides::Grammars => "Grammars",',
+                '        ExtensionProvides::LanguageServers => "Language Servers",',
+                '        ExtensionProvides::ContextServers => "MCP Servers",',
+                '        ExtensionProvides::AgentServers => "Agent Servers",',
+                '        ExtensionProvides::SlashCommands => "Slash Commands",',
+                '        ExtensionProvides::IndexedDocsProviders => "Indexed Docs Providers",',
+                '        ExtensionProvides::Snippets => "Snippets",',
+                '        ExtensionProvides::DebugAdapters => "Debug Adapters",',
+                "    }",
+                "}",
+            ]
+        )
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/extensions_ui/src/components/extension_card.rs",
+        )
+
+        by_source = {occurrence.source: occurrence for occurrence in occurrences}
+        self.assertEqual(
+            set(by_source),
+            {
+                "Themes",
+                "Icon Themes",
+                "Languages",
+                "Grammars",
+                "Language Servers",
+                "MCP Servers",
+                "Agent Servers",
+                "Slash Commands",
+                "Indexed Docs Providers",
+                "Snippets",
+                "Debug Adapters",
+            },
+        )
+        self.assertEqual(by_source["MCP Servers"].call, "extension_provides_label")
+
     def test_extracts_keybinding_hint_suffixes(self) -> None:
         source = "\n".join(
             [

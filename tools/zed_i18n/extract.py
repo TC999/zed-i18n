@@ -1368,6 +1368,12 @@ def _extract_ui_return_method_occurrences(source_bytes: bytes, node, relative_pa
     rule = UI_RETURN_METHODS.get(method_name)
     if rule is None and relative_path == "crates/workspace/src/dock.rs" and method_name == "label":
         rule = ("dock_position_label", "DockPosition.label")
+    if (
+        rule is None
+        and relative_path == "crates/extensions_ui/src/components/extension_card.rs"
+        and method_name == "extension_provides_label"
+    ):
+        rule = ("extension_provides_label", "extension_provides_label")
     if rule is None and _is_agent_tool_path(relative_path) and method_name == "initial_title":
         rule = ("agent_tool_title", "initial_title")
     if rule is None and _is_git_panel_path(relative_path) and method_name == "error_action":
