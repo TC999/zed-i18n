@@ -6378,7 +6378,7 @@
         "start_byte": 15949
       }
     ],
-    "status": "needs_review"
+    "status": "ignored"
   },
   "Agent Setup": {
     "occurrences": [
@@ -21421,7 +21421,7 @@
         "start_byte": 16200
       }
     ],
-    "status": "needs_review"
+    "status": "accepted"
   },
   "Debug Panel": {
     "occurrences": [
@@ -41724,7 +41724,7 @@
         "start_byte": 15768
       }
     ],
-    "status": "needs_review"
+    "status": "accepted"
   },
   "Grant Mic Access": {
     "occurrences": [
@@ -43762,7 +43762,7 @@
         "start_byte": 15661
       }
     ],
-    "status": "needs_review"
+    "status": "accepted"
   },
   "Icon Themes…": {
     "occurrences": [
@@ -44827,7 +44827,7 @@
         "start_byte": 16079
       }
     ],
-    "status": "needs_review"
+    "status": "ignored"
   },
   "Indicates a changed or altered status, like a file that has been edited.": {
     "occurrences": [
@@ -79015,7 +79015,7 @@
         "start_byte": 16010
       }
     ],
-    "status": "needs_review"
+    "status": "ignored"
   },
   "Small": {
     "occurrences": [
@@ -79153,7 +79153,7 @@
         "start_byte": 16144
       }
     ],
-    "status": "needs_review"
+    "status": "accepted"
   },
   "Soft Wrap": {
     "occurrences": [
@@ -87408,7 +87408,7 @@
         "start_byte": 15610
       }
     ],
-    "status": "needs_review"
+    "status": "accepted"
   },
   "Themes…": {
     "occurrences": [

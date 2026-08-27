@@ -81,6 +81,7 @@ _KNOWN_KINDS = {
     "empty_state",
     "error_detail",
     "error_prompt",
+    "extension_provides_label",
     "fast_mode_confirmation_message",
     "fast_mode_confirmation_title",
     "feature_upsell",

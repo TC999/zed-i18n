@@ -421,6 +421,7 @@ class UniversalApplyTests(unittest.TestCase):
             [
                 'fn render() { Label::new("Choose an option"); }',
                 'fn error_action() -> &\'static str { "stash tracked" }',
+                'fn extension_provides_label() -> &\'static str { "MCP Servers" }',
             ]
         )
         path = self._write_source("crates/demo/src/lib.rs", source)
@@ -439,12 +440,19 @@ class UniversalApplyTests(unittest.TestCase):
                 2,
                 "status_toast_fragment",
             ),
+            "MCP Servers": self._entry(
+                path,
+                source,
+                '"MCP Servers"',
+                3,
+                "extension_provides_label",
+            ),
         }
 
         report = build_handling_map(self.zed_root, manifest)
 
-        self.assertEqual(report.kind_count, 2)
-        self.assertEqual(report.class_counts, {"rewrite_static": 2})
+        self.assertEqual(report.kind_count, 3)
+        self.assertEqual(report.class_counts, {"rewrite_static": 3})
 
     def test_validates_rust_string_line_continuations_like_the_extractor(self) -> None:
         source = 'fn render() { Label::new("First \\\n                              second"); }\n'
