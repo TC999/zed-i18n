@@ -1021,6 +1021,24 @@ class CiReleaseTests(unittest.TestCase):
         self.assertIn("--notes-file release-notes.md", restore_workflow)
         self.assertNotIn('--notes "Localized Zed build restored', restore_workflow)
 
+    def test_release_workflows_format_titles_from_release_revision(self) -> None:
+        workflows = {
+            name: (Path.cwd() / ".github" / "workflows" / name).read_text(encoding="utf-8")
+            for name in ("i18n-release.yml", "i18n-publish-existing.yml")
+        }
+
+        for name, workflow in workflows.items():
+            with self.subTest(workflow=name):
+                self.assertIn('RELEASE_VERSION="${RELEASE_TAG%-i18n.*}"', workflow)
+                self.assertIn('RELEASE_REVISION="${RELEASE_TAG##*-i18n.}"', workflow)
+                self.assertIn('RELEASE_TITLE="Zed-i18n $RELEASE_VERSION"', workflow)
+                self.assertIn('if [[ "$RELEASE_REVISION" != "1" ]]; then', workflow)
+                self.assertIn(
+                    'RELEASE_TITLE="${RELEASE_TITLE}-${RELEASE_REVISION}"', workflow
+                )
+                self.assertIn('--title "$RELEASE_TITLE"', workflow)
+                self.assertNotIn('--title "$RELEASE_TAG"', workflow)
+
     def test_release_workflow_publishes_release_after_validating_assets(self) -> None:
         release_workflow = (
             Path.cwd() / ".github" / "workflows" / "i18n-release.yml"

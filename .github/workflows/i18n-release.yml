@@ -648,6 +648,12 @@ jobs:
           fi
 
           RELEASE_TAG="${INPUT_RELEASE_TAG:-$GITHUB_REF_NAME}"
+          RELEASE_VERSION="${RELEASE_TAG%-i18n.*}"
+          RELEASE_REVISION="${RELEASE_TAG##*-i18n.}"
+          RELEASE_TITLE="Zed-i18n $RELEASE_VERSION"
+          if [[ "$RELEASE_REVISION" != "1" ]]; then
+            RELEASE_TITLE="${RELEASE_TITLE}-${RELEASE_REVISION}"
+          fi
           mv release-artifacts/release-notes.md release-notes.md
           if ! gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${RELEASE_TAG}" >/dev/null; then
             echo "Release tag does not exist: $RELEASE_TAG"
@@ -659,7 +665,7 @@ jobs:
               --repo "$GITHUB_REPOSITORY" \
               --verify-tag \
               --draft \
-              --title "$RELEASE_TAG" \
+              --title "$RELEASE_TITLE" \
               --notes-file release-notes.md
           fi
 
