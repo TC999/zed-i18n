@@ -134,10 +134,10 @@ fn GetTitle(&self) -> Result<windows_core::PWSTR> {
 }
 
 fn retrieve_command_description() -> Result<HSTRING> {
-    #[cfg(all(feature = "stable", not(feature = "preview"), not(feature = "nightly")))]
-    const REG_PATH: &str = "Software\\\\Classes\\\\ZedEditorContextMenu";
-    #[cfg(all(feature = "preview", not(feature = "stable"), not(feature = "nightly")))]
-    const REG_PATH: &str = "Software\\\\Classes\\\\ZedEditorPreviewContextMenu";
+    const REG_PATH: &str = cfg_select! {
+        feature = "stable" => { r#"Software\\Classes\\ZedContextMenu"# },
+        feature = "preview" => { r#"Software\\Classes\\ZedPreviewContextMenu"# },
+    };
 }
 """,
             "crates/zed/resources/windows/zed.iss": """
@@ -321,7 +321,7 @@ fn app_menus() -> Vec<Menu> {
         self.assertIn('"stable" => ("app-icon.ico", "Zed i18n")', windows_resources)
         self.assertIn('"preview" => ("app-icon-preview.ico", "Zed Preview")', windows_resources)
         self.assertIn(
-            'const REG_PATH: &str = "Software\\\\Classes\\\\ZedI18nContextMenu";',
+            'feature = "stable" => { "Software\\\\Classes\\\\ZedI18nContextMenu" },',
             explorer_command_injector,
         )
         self.assertIn(
@@ -329,7 +329,7 @@ fn app_menus() -> Vec<Menu> {
             explorer_command_injector,
         )
         self.assertIn(
-            '"Software\\\\Classes\\\\ZedEditorPreviewContextMenu"',
+            'r#"Software\\Classes\\ZedPreviewContextMenu"#',
             explorer_command_injector,
         )
         self.assertIn("ZED_I18N_UPDATE_MANIFEST_URL", auto_update)

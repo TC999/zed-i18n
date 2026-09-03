@@ -7010,6 +7010,135 @@ class ExtractTests(unittest.TestCase):
             },
         )
 
+    def test_extracts_tabular_data_preview_toggle_entry_entries(self) -> None:
+        source = r'''
+fn settings_menu(menu: ContextMenu) -> ContextMenu {
+    let menu = toggle_entry(
+        menu.header("Text Alignment"),
+        "Top",
+        Some("Choose vertical text alignment within cells"),
+        true,
+        &view_entity,
+        |settings| settings.vertical_alignment = VerticalAlignment::Top,
+    );
+    toggle_entry(menu, "Center", None, false, &view_entity, |_| {})
+}
+'''
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/tabular_data_preview/src/renderer/settings.rs",
+        )
+
+        by_source = {occurrence.source: occurrence for occurrence in occurrences}
+        self.assertEqual(
+            set(by_source),
+            {
+                "Text Alignment",
+                "Top",
+                "Center",
+                "Choose vertical text alignment within cells",
+            },
+        )
+        self.assertEqual(by_source["Top"].call, "toggle_entry")
+        self.assertEqual(by_source["Top"].kind, "context_menu_entry")
+        self.assertEqual(
+            by_source["Choose vertical text alignment within cells"].kind,
+            "documentation_aside",
+        )
+
+    def test_skips_toggle_entry_outside_tabular_data_preview_settings(self) -> None:
+        occurrences = extract_ui_strings_from_source(
+            r'fn render() { toggle_entry(menu, "Variable Height", None, true, &view, |_| {}); }',
+            relative_path="crates/debugger_ui/src/session/running/variable_list.rs",
+        )
+
+        self.assertEqual(occurrences, [])
+
+    def test_resolves_tuple_bindings_bound_by_a_match_expression(self) -> None:
+        source = r'''
+fn render(&self) -> AnyElement {
+    let (icon, tooltip_text) = match self.settings.numbering_type {
+        RowIdentifiers::SrcLines => (IconName::Code, "Showing file line numbers."),
+        RowIdentifiers::RowNum => (IconName::Hash, "Showing sequential row numbers."),
+    };
+    IconButton::new("row-identifier-toggle", icon).tooltip(Tooltip::text(tooltip_text))
+}
+'''
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/tabular_data_preview/src/renderer/row_identifiers.rs",
+        )
+
+        by_source = {occurrence.source: occurrence for occurrence in occurrences}
+        self.assertEqual(
+            set(by_source),
+            {"Showing file line numbers.", "Showing sequential row numbers."},
+        )
+        self.assertEqual(by_source["Showing file line numbers."].call, "Tooltip::text")
+
+    def test_extracts_provider_response_message_without_the_error_code(self) -> None:
+        source = r'''
+fn completion_error() -> LanguageModelCompletionError {
+    LanguageModelCompletionError::from_provider_response(
+        PROVIDER_NAME,
+        None,
+        Some("ThrottlingException".to_string()),
+        "Bedrock request was throttled".to_string(),
+        None,
+        ProviderErrorCategory::RateLimit,
+    )
+}
+'''
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/language_models/src/provider/bedrock.rs",
+        )
+
+        by_source = {occurrence.source: occurrence for occurrence in occurrences}
+        self.assertEqual(set(by_source), {"Bedrock request was throttled"})
+        self.assertEqual(
+            by_source["Bedrock request was throttled"].kind,
+            "provider_model_error",
+        )
+
+    def test_allowed_literal_span_is_not_reclaimed_by_a_call_rule(self) -> None:
+        source = r'''
+fn completion_error(name: &str) -> LanguageModelCompletionError {
+    LanguageModelCompletionError::from_provider_response(
+        PROVIDER_NAME,
+        None,
+        None,
+        format!(
+            "Bedrock Mantle denied this request for {}. Mantle-only models require IAM \
+             permissions for the `bedrock-mantle` endpoint (for example via the \
+             `AmazonBedrockMantleInferenceAccess` managed policy) in addition to whatever \
+             permissions your existing Bedrock credentials already have.",
+            name
+        ),
+        None,
+        ProviderErrorCategory::Permission,
+    )
+}
+'''
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/language_models/src/provider/bedrock.rs",
+        )
+
+        self.assertEqual(len(occurrences), 1)
+        self.assertEqual(occurrences[0].call, "BedrockMantle.user_error")
+        self.assertEqual(
+            occurrences[0].source,
+            "Bedrock Mantle denied this request for {}. Mantle-only models require IAM "
+            "permissions for the `bedrock-mantle` endpoint (for example via the "
+            "`AmazonBedrockMantleInferenceAccess` managed policy) in addition to whatever "
+            "permissions your existing Bedrock credentials already have.",
+        )
+
     def test_repository_extract_fails_when_required_composite_rule_is_missing(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

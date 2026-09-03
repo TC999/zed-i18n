@@ -723,7 +723,15 @@ def extract_ui_strings_from_source(source: str, relative_path: str) -> list[Stri
         return []
 
     occurrences: list[StringOccurrence] = []
-    occurrences.extend(_extract_allowed_literal_occurrences(source_bytes, relative_path))
+    allowed_literal_occurrences = _extract_allowed_literal_occurrences(
+        source_bytes,
+        relative_path,
+    )
+    occurrences.extend(allowed_literal_occurrences)
+    allowed_literal_spans = {
+        (occurrence.start_byte, occurrence.end_byte)
+        for occurrence in allowed_literal_occurrences
+    }
     for node in _walk(tree.root_node):
         if node.type != "call_expression":
             continue
@@ -755,6 +763,11 @@ def extract_ui_strings_from_source(source: str, relative_path: str) -> list[Stri
                 argument_node,
                 allow_unwrap_or=kind == "placeholder",
             ):
+                if (
+                    literal_node.start_byte,
+                    literal_node.end_byte,
+                ) in allowed_literal_spans:
+                    continue
                 literal = _node_text(source_bytes, literal_node)
                 parsed_source = parse_rust_string_literal(literal)
                 if _should_skip_contextual_call_source(parsed_source, call_name):
@@ -1129,6 +1142,14 @@ def _contextual_rules_for_call(call: str, relative_path: str) -> tuple[tuple[int
     if _is_git_graph_path(relative_path) and canonical.endswith(".header"):
         return ((0, "context_menu_header", "header"),)
     if (
+        _is_tabular_data_preview_settings_path(relative_path)
+        and canonical == "toggle_entry"
+    ):
+        return (
+            (1, "context_menu_entry", "toggle_entry"),
+            (2, "documentation_aside", "toggle_entry.description"),
+        )
+    if (
         _is_git_diff_multibuffer_caller_path(relative_path)
         and canonical == "DiffMultibuffer::new"
     ):
@@ -1197,6 +1218,8 @@ def _contextual_rules_for_call(call: str, relative_path: str) -> tuple[tuple[int
             return ((2, "placeholder", "ApiKeyEditor::new.placeholder"),)
         if canonical.endswith("Model::new_disabled"):
             return ((1, "provider_model_error", "Model::new_disabled"),)
+    if canonical.endswith("from_provider_response"):
+        return ((3, "provider_model_error", "from_provider_response"),)
     if _is_prompt_error_call(canonical):
         return ((0, "error_prompt", _prompt_error_call_name(canonical)),)
     if _is_method_call(canonical, "show_error"):
@@ -1801,7 +1824,7 @@ def _visible_literal_nodes_for_tuple_index(
                 allow_unwrap_or=allow_unwrap_or,
             )
         ]
-    if node.type in {"block", "else_clause"}:
+    if node.type in {"block", "else_clause", "match_expression", "match_block", "match_arm"}:
         return [
             literal
             for child in node.named_children
@@ -3622,6 +3645,10 @@ def _is_git_commit_view_path(relative_path: str) -> bool:
 
 def _is_git_branch_diff_path(relative_path: str) -> bool:
     return relative_path == "crates/git_ui/src/branch_diff.rs"
+
+
+def _is_tabular_data_preview_settings_path(relative_path: str) -> bool:
+    return relative_path == "crates/tabular_data_preview/src/renderer/settings.rs"
 
 
 def _is_git_graph_path(relative_path: str) -> bool:

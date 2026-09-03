@@ -270,8 +270,8 @@ def patch_windows_resources(zed_root: Path, config: DistributionConfig) -> None:
             f"retrieve_command_description().unwrap_or(HSTRING::from({shell_title}))",
         ),
         (
-            'const REG_PATH: &str = "Software\\\\Classes\\\\ZedEditorContextMenu";',
-            f"const REG_PATH: &str = {registry_path};",
+            'feature = "stable" => { r#"Software\\Classes\\ZedContextMenu"# },',
+            f'feature = "stable" => {{ {registry_path} }},',
         ),
     ]
     _write(
