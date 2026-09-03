@@ -7241,6 +7241,31 @@ fn completion_error(name: &str) -> LanguageModelCompletionError {
             ):
                 extract_repository(zed_root, overlay_root)
 
+    def test_call_rule_literals_fold_line_continuations_like_rustc(self) -> None:
+        source = "\n".join(
+            [
+                "fn render() {",
+                "    Label::new(",
+                '        "Alternatively, you can connect to an Ollama server by specifying its \\',
+                '                URL and API key (may not be required):",',
+                "    );",
+                "}",
+            ]
+        )
+
+        occurrences = extract_ui_strings_from_source(
+            source,
+            relative_path="crates/example/src/lib.rs",
+        )
+
+        self.assertEqual(
+            [occurrence.source for occurrence in occurrences],
+            [
+                "Alternatively, you can connect to an Ollama server by specifying its "
+                "URL and API key (may not be required):"
+            ],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

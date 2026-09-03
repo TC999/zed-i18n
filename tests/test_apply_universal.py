@@ -466,13 +466,13 @@ class UniversalApplyTests(unittest.TestCase):
         )
 
         collapsed = build_handling_map(self.zed_root, {"First second": entry})
-        preserved = build_handling_map(
-            self.zed_root,
-            {"First                               second": entry},
-        )
 
         self.assertEqual(collapsed.class_counts, {"rewrite_static": 1})
-        self.assertEqual(preserved.class_counts, {"rewrite_static": 1})
+        with self.assertRaisesRegex(ValueError, "stale occurrence source"):
+            build_handling_map(
+                self.zed_root,
+                {"First                               second": entry},
+            )
 
     def test_ignores_runtime_overlay_occurrences_during_checkout_rewrite(self) -> None:
         manifest = {

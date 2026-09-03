@@ -1,6 +1,7 @@
 import unittest
 
 from tools.zed_i18n.rust_strings import (
+    parse_rust_string_literal,
     rust_format_placeholders,
     rust_format_placeholders_compatible,
     rust_string_literal,
@@ -124,6 +125,21 @@ class RustStringTests(unittest.TestCase):
             rust_string_literal("Saved to {sep}\\u{2039}name\\u{203A}"),
             '"Saved to {sep}\\u{2039}name\\u{203A}"',
         )
+
+    def test_parse_rust_string_literal_folds_line_continuations_like_rustc(self) -> None:
+        self.assertEqual(
+            parse_rust_string_literal('"first \\\n                second"'),
+            "first second",
+        )
+        self.assertEqual(
+            parse_rust_string_literal('"first\\n\\\n                {err}"'),
+            "first\n{err}",
+        )
+
+    def test_parse_rust_string_literal_does_not_fold_raw_string_continuations(self) -> None:
+        literal = 'r"first \\\n    second"'
+
+        self.assertIn("\\\n", parse_rust_string_literal(literal))
 
 
 if __name__ == "__main__":

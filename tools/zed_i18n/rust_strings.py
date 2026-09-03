@@ -7,6 +7,9 @@ import re
 import warnings
 
 _RUST_UNICODE_ESCAPE_RE = re.compile(r"\\u\{([0-9A-Fa-f_]{1,6})\}")
+# rustc drops a `\` before a newline together with the next line's leading
+# whitespace; Python's literal parser keeps that indentation.
+_RUST_LINE_CONTINUATION_RE = re.compile(r"\\\r?\n[ \t]*")
 _ZERO_PRECISION_FORMAT_SPEC = ".0"
 _ZERO_PRECISION_SUFFIX_PLACEHOLDER = f"{{:{_ZERO_PRECISION_FORMAT_SPEC}}}"
 _ZERO_PRECISION_SUFFIX_SOURCES = {
@@ -236,6 +239,7 @@ def _is_implicit_rust_format_placeholder(placeholder: str) -> bool:
 
 def parse_rust_string_literal(literal: str) -> str:
     if literal.startswith('"') and literal.endswith('"'):
+        literal = _RUST_LINE_CONTINUATION_RE.sub("", literal)
         try:
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore", SyntaxWarning)

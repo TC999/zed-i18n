@@ -265,7 +265,7 @@ class ApplyTests(unittest.TestCase):
             source_path.read_text(encoding="utf-8"),
         )
 
-    def test_applies_translation_to_legacy_line_continued_manifest_source(self) -> None:
+    def test_reports_legacy_line_continued_manifest_source_as_stale(self) -> None:
         source_path = self.root / "main.rs"
         source = (
             "Run LLMs locally on your machine with Ollama, or connect to an Ollama server. "
@@ -296,10 +296,12 @@ class ApplyTests(unittest.TestCase):
             {source: "로컬 Ollama로 LLM을 실행하거나 Ollama 서버에 연결할 수 있습니다."},
         )
 
-        self.assertEqual(report.applied, [source])
-        self.assertEqual(report.stale, [])
-        self.assertIn(
-            '"로컬 Ollama로 LLM을 실행하거나 Ollama 서버에 연결할 수 있습니다."',
+        # The extractor now folds `\` continuations like rustc, so a manifest key
+        # that still carries the source indentation no longer matches anything.
+        self.assertEqual(report.applied, [])
+        self.assertEqual(report.stale, [source])
+        self.assertNotIn(
+            "로컬 Ollama로 LLM을 실행하거나",
             source_path.read_text(encoding="utf-8"),
         )
 
