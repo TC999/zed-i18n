@@ -83,11 +83,11 @@
       },
       {
         "call": "ListBulletItem::new",
-        "end_byte": 31527,
+        "end_byte": 31879,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "list_bullet_item",
-        "line": 893,
-        "start_byte": 31525
+        "line": 899,
+        "start_byte": 31877
       },
       {
         "call": "LoadingLabel::new",
@@ -4119,11 +4119,11 @@
       },
       {
         "call": "label",
-        "end_byte": 27249,
+        "end_byte": 27601,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 767,
-        "start_byte": 27240
+        "line": 773,
+        "start_byte": 27592
       }
     ],
     "status": "accepted"
@@ -4156,11 +4156,11 @@
       },
       {
         "call": "ConfiguredApiCard::new",
-        "end_byte": 30374,
+        "end_byte": 30726,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "configured_api_card_label",
-        "line": 863,
-        "start_byte": 30354
+        "line": 869,
+        "start_byte": 30706
       }
     ],
     "status": "accepted"
@@ -4177,11 +4177,11 @@
       },
       {
         "call": "ConfiguredApiCard::new",
-        "end_byte": 30459,
+        "end_byte": 30811,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "configured_api_card_label",
-        "line": 865,
-        "start_byte": 30432
+        "line": 871,
+        "start_byte": 30784
       }
     ],
     "status": "accepted"
@@ -4211,11 +4211,11 @@
     "occurrences": [
       {
         "call": "ConfiguredApiCard::new",
-        "end_byte": 30204,
+        "end_byte": 30556,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "configured_api_card_label",
-        "line": 859,
-        "start_byte": 30144
+        "line": 865,
+        "start_byte": 30496
       }
     ],
     "status": "accepted"
@@ -4266,11 +4266,11 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 226350,
+        "end_byte": 226490,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5927,
-        "start_byte": 226343
+        "line": 5930,
+        "start_byte": 226483
       }
     ],
     "status": "accepted"
@@ -5409,11 +5409,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action",
-        "end_byte": 260422,
+        "end_byte": 260514,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 6602,
-        "start_byte": 260409
+        "line": 6606,
+        "start_byte": 260501
       }
     ],
     "status": "accepted"
@@ -6876,11 +6876,11 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 220891,
+        "end_byte": 221031,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5803,
-        "start_byte": 220877
+        "line": 5806,
+        "start_byte": 221017
       }
     ],
     "status": "accepted"
@@ -6889,11 +6889,11 @@
     "occurrences": [
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 220114,
+        "end_byte": 220254,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5786,
-        "start_byte": 220089
+        "line": 5789,
+        "start_byte": 220229
       }
     ],
     "status": "accepted"
@@ -6902,19 +6902,19 @@
     "occurrences": [
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 220167,
+        "end_byte": 220307,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5788,
-        "start_byte": 220144
+        "line": 5791,
+        "start_byte": 220284
       },
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 314253,
+        "end_byte": 314710,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8118,
-        "start_byte": 314230
+        "line": 8128,
+        "start_byte": 314687
       }
     ],
     "status": "accepted"
@@ -6923,19 +6923,19 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 220407,
+        "end_byte": 220547,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5793,
-        "start_byte": 220395
+        "line": 5796,
+        "start_byte": 220535
       },
       {
         "call": "PermissionOption::new",
-        "end_byte": 324126,
+        "end_byte": 324583,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8366,
-        "start_byte": 324114
+        "line": 8376,
+        "start_byte": 324571
       }
     ],
     "status": "accepted"
@@ -7449,11 +7449,11 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 323561,
+        "end_byte": 324018,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8353,
-        "start_byte": 323547
+        "line": 8363,
+        "start_byte": 324004
       }
     ],
     "status": "accepted"
@@ -7475,11 +7475,11 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 323800,
+        "end_byte": 324257,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8358,
-        "start_byte": 323787
+        "line": 8368,
+        "start_byte": 324244
       }
     ],
     "status": "accepted"
@@ -7535,19 +7535,19 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 213956,
+        "end_byte": 214096,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5651,
-        "start_byte": 213920
+        "line": 5654,
+        "start_byte": 214060
       },
       {
         "call": "PermissionOption::new",
-        "end_byte": 214240,
+        "end_byte": 214380,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5656,
-        "start_byte": 214204
+        "line": 5659,
+        "start_byte": 214344
       }
     ],
     "status": "accepted"
@@ -7629,19 +7629,19 @@
     "occurrences": [
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 238643,
+        "end_byte": 238783,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 6196,
-        "start_byte": 238615
+        "line": 6199,
+        "start_byte": 238755
       },
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 317060,
+        "end_byte": 317517,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8191,
-        "start_byte": 317032
+        "line": 8201,
+        "start_byte": 317489
       }
     ],
     "status": "accepted"
@@ -8530,19 +8530,19 @@
       },
       {
         "call": "Tooltip::for_action",
-        "end_byte": 246112,
+        "end_byte": 246204,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 6284,
-        "start_byte": 246096
+        "line": 6288,
+        "start_byte": 246188
       },
       {
         "call": "entry",
-        "end_byte": 254250,
+        "end_byte": 254342,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "context_menu_entry",
-        "line": 6449,
-        "start_byte": 254234
+        "line": 6453,
+        "start_byte": 254326
       }
     ],
     "status": "accepted"
@@ -13176,11 +13176,11 @@
       },
       {
         "call": "Tooltip::text",
-        "end_byte": 283277,
+        "end_byte": 283369,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 7259,
-        "start_byte": 283263
+        "line": 7263,
+        "start_byte": 283355
       }
     ],
     "status": "accepted"
@@ -14008,11 +14008,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action",
-        "end_byte": 257529,
+        "end_byte": 257621,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 6525,
-        "start_byte": 257513
+        "line": 6529,
+        "start_byte": 257605
       }
     ],
     "status": "accepted"
@@ -17129,11 +17129,11 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 226125,
+        "end_byte": 226265,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5922,
-        "start_byte": 226115
+        "line": 5925,
+        "start_byte": 226255
       },
       {
         "call": "Button::new",
@@ -27965,19 +27965,19 @@
       },
       {
         "call": "PermissionOption::new",
-        "end_byte": 221117,
+        "end_byte": 221257,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5808,
-        "start_byte": 221111
+        "line": 5811,
+        "start_byte": 221251
       },
       {
         "call": "PermissionOption::new",
-        "end_byte": 238869,
+        "end_byte": 239009,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 6201,
-        "start_byte": 238863
+        "line": 6204,
+        "start_byte": 239003
       },
       {
         "call": "Button::new",
@@ -28026,11 +28026,11 @@
     "occurrences": [
       {
         "call": "PermissionOption::new",
-        "end_byte": 324344,
+        "end_byte": 324801,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8371,
-        "start_byte": 324333
+        "line": 8381,
+        "start_byte": 324790
       }
     ],
     "status": "accepted"
@@ -29432,11 +29432,11 @@
     "occurrences": [
       {
         "call": "Tooltip::text",
-        "end_byte": 244937,
+        "end_byte": 245029,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 6263,
-        "start_byte": 244922
+        "line": 6267,
+        "start_byte": 245014
       }
     ],
     "status": "accepted"
@@ -36116,11 +36116,11 @@
     "occurrences": [
       {
         "call": "Toast::new",
-        "end_byte": 166529,
+        "end_byte": 166621,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "toast",
-        "line": 4189,
-        "start_byte": 166490
+        "line": 4193,
+        "start_byte": 166582
       }
     ],
     "status": "accepted"
@@ -38204,11 +38204,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 286166,
+        "end_byte": 286258,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "label",
-        "line": 7328,
-        "start_byte": 286151
+        "line": 7332,
+        "start_byte": 286243
       }
     ],
     "status": "accepted"
@@ -42748,11 +42748,11 @@
     "occurrences": [
       {
         "call": "tooltip",
-        "end_byte": 287568,
+        "end_byte": 287660,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 7360,
-        "start_byte": 287547
+        "line": 7364,
+        "start_byte": 287639
       }
     ],
     "status": "accepted"
@@ -49168,11 +49168,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 32580,
+        "end_byte": 32932,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 917,
-        "start_byte": 32556
+        "line": 923,
+        "start_byte": 32908
       }
     ],
     "status": "accepted"
@@ -55813,11 +55813,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 34577,
+        "end_byte": 34929,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 958,
-        "start_byte": 34500
+        "line": 964,
+        "start_byte": 34852
       }
     ],
     "status": "accepted"
@@ -55899,11 +55899,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 279029,
+        "end_byte": 279121,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "label",
-        "line": 7154,
-        "start_byte": 278998
+        "line": 7158,
+        "start_byte": 279090
       }
     ],
     "status": "accepted"
@@ -55920,11 +55920,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 279075,
+        "end_byte": 279167,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "label",
-        "line": 7156,
-        "start_byte": 279059
+        "line": 7160,
+        "start_byte": 279151
       }
     ],
     "status": "accepted"
@@ -57402,19 +57402,19 @@
       },
       {
         "call": "PermissionOption::new",
-        "end_byte": 214571,
+        "end_byte": 214711,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5664,
-        "start_byte": 214555
+        "line": 5667,
+        "start_byte": 214695
       },
       {
         "call": "PermissionOption::new",
-        "end_byte": 214794,
+        "end_byte": 214934,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 5669,
-        "start_byte": 214778
+        "line": 5672,
+        "start_byte": 214918
       }
     ],
     "status": "accepted"
@@ -58469,11 +58469,11 @@
       },
       {
         "call": "entry",
-        "end_byte": 252209,
+        "end_byte": 252301,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "context_menu_entry",
-        "line": 6412,
-        "start_byte": 252184
+        "line": 6416,
+        "start_byte": 252276
       }
     ],
     "status": "accepted"
@@ -59009,11 +59009,11 @@
     "occurrences": [
       {
         "call": "Headline::new",
-        "end_byte": 34781,
+        "end_byte": 35133,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "headline",
-        "line": 967,
-        "start_byte": 34771
+        "line": 973,
+        "start_byte": 35123
       }
     ],
     "status": "accepted"
@@ -59022,11 +59022,11 @@
     "occurrences": [
       {
         "call": "ButtonLink::new",
-        "end_byte": 31729,
+        "end_byte": 32081,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "button_link",
-        "line": 896,
-        "start_byte": 31711
+        "line": 902,
+        "start_byte": 32063
       }
     ],
     "status": "accepted"
@@ -61914,11 +61914,11 @@
     "occurrences": [
       {
         "call": "ListBulletItem::new",
-        "end_byte": 32040,
+        "end_byte": 32392,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "list_bullet_item",
-        "line": 902,
-        "start_byte": 31976
+        "line": 908,
+        "start_byte": 32328
       }
     ],
     "status": "accepted"
@@ -62357,27 +62357,27 @@
     "occurrences": [
       {
         "call": "AgentThread.tool_error",
-        "end_byte": 230032,
+        "end_byte": 230172,
         "file": "crates/agent/src/thread.rs",
         "kind": "agent_tool_error",
-        "line": 6013,
-        "start_byte": 229993
+        "line": 6016,
+        "start_byte": 230133
       },
       {
         "call": "AgentThread.tool_error",
-        "end_byte": 230286,
+        "end_byte": 230426,
         "file": "crates/agent/src/thread.rs",
         "kind": "agent_tool_error",
-        "line": 6018,
-        "start_byte": 230247
+        "line": 6021,
+        "start_byte": 230387
       },
       {
         "call": "AgentThread.tool_error",
-        "end_byte": 253685,
+        "end_byte": 253825,
         "file": "crates/agent/src/thread.rs",
         "kind": "agent_tool_error",
-        "line": 6528,
-        "start_byte": 253646
+        "line": 6531,
+        "start_byte": 253786
       }
     ],
     "status": "accepted"
@@ -63622,11 +63622,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 52459,
+        "end_byte": 52647,
         "file": "crates/terminal_view/src/terminal_view.rs",
         "kind": "label",
-        "line": 1455,
-        "start_byte": 52437
+        "line": 1462,
+        "start_byte": 52625
       }
     ],
     "status": "accepted"
@@ -64759,11 +64759,11 @@
     "occurrences": [
       {
         "call": "from_provider_response",
-        "end_byte": 327241,
+        "end_byte": 327698,
         "file": "crates/agent/src/thread.rs",
         "kind": "provider_model_error",
-        "line": 8441,
-        "start_byte": 327220
+        "line": 8451,
+        "start_byte": 327677
       },
       {
         "call": "from_provider_response",
@@ -65534,11 +65534,11 @@
       },
       {
         "call": "entry",
-        "end_byte": 251004,
+        "end_byte": 251096,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "context_menu_entry",
-        "line": 6390,
-        "start_byte": 250979
+        "line": 6394,
+        "start_byte": 251071
       }
     ],
     "status": "accepted"
@@ -66679,11 +66679,11 @@
       },
       {
         "call": "tab_context_menu_action",
-        "end_byte": 63288,
+        "end_byte": 63476,
         "file": "crates/terminal_view/src/terminal_view.rs",
         "kind": "context_menu_action",
-        "line": 1735,
-        "start_byte": 63280
+        "line": 1742,
+        "start_byte": 63468
       }
     ],
     "status": "accepted"
@@ -66718,11 +66718,11 @@
     "occurrences": [
       {
         "call": "Tooltip::for_action",
-        "end_byte": 243135,
+        "end_byte": 243227,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 6225,
-        "start_byte": 243120
+        "line": 6229,
+        "start_byte": 243212
       }
     ],
     "status": "accepted"
@@ -66731,11 +66731,11 @@
     "occurrences": [
       {
         "call": "entry",
-        "end_byte": 250076,
+        "end_byte": 250168,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "context_menu_entry",
-        "line": 6371,
-        "start_byte": 250062
+        "line": 6375,
+        "start_byte": 250154
       }
     ],
     "status": "accepted"
@@ -70008,11 +70008,11 @@
     "occurrences": [
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 237247,
+        "end_byte": 237387,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 6169,
-        "start_byte": 237208
+        "line": 6172,
+        "start_byte": 237348
       }
     ],
     "status": "accepted"
@@ -70021,19 +70021,19 @@
     "occurrences": [
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 237314,
+        "end_byte": 237454,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 6171,
-        "start_byte": 237277
+        "line": 6174,
+        "start_byte": 237417
       },
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 316996,
+        "end_byte": 317453,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8190,
-        "start_byte": 316959
+        "line": 8200,
+        "start_byte": 317416
       }
     ],
     "status": "accepted"
@@ -70042,19 +70042,19 @@
     "occurrences": [
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 238145,
+        "end_byte": 238285,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 6186,
-        "start_byte": 238119
+        "line": 6189,
+        "start_byte": 238259
       },
       {
         "call": "AgentThread.permission_option",
-        "end_byte": 316923,
+        "end_byte": 317380,
         "file": "crates/agent/src/thread.rs",
         "kind": "permission_option",
-        "line": 8189,
-        "start_byte": 316897
+        "line": 8199,
+        "start_byte": 317354
       }
     ],
     "status": "accepted"
@@ -76661,11 +76661,11 @@
     "occurrences": [
       {
         "call": "label",
-        "end_byte": 33840,
+        "end_byte": 34192,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 944,
-        "start_byte": 33824
+        "line": 950,
+        "start_byte": 34176
       }
     ],
     "status": "accepted"
@@ -76950,11 +76950,11 @@
     "occurrences": [
       {
         "call": "tooltip",
-        "end_byte": 287651,
+        "end_byte": 287743,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 7362,
-        "start_byte": 287630
+        "line": 7366,
+        "start_byte": 287722
       }
     ],
     "status": "accepted"
@@ -77114,11 +77114,11 @@
     "occurrences": [
       {
         "call": "label",
-        "end_byte": 33111,
+        "end_byte": 33463,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 929,
-        "start_byte": 33094
+        "line": 935,
+        "start_byte": 33446
       }
     ],
     "status": "accepted"
@@ -79110,11 +79110,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 31604,
+        "end_byte": 31956,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 894,
-        "start_byte": 31575
+        "line": 900,
+        "start_byte": 31927
       }
     ],
     "status": "accepted"
@@ -82254,11 +82254,11 @@
       },
       {
         "call": "Tooltip::text",
-        "end_byte": 244280,
+        "end_byte": 244372,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "tooltip",
-        "line": 6251,
-        "start_byte": 244263
+        "line": 6255,
+        "start_byte": 244355
       }
     ],
     "status": "accepted"
@@ -82915,11 +82915,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 32917,
+        "end_byte": 33269,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 925,
-        "start_byte": 32902
+        "line": 931,
+        "start_byte": 33254
       }
     ],
     "status": "accepted"
@@ -88651,11 +88651,11 @@
     "occurrences": [
       {
         "call": "from_provider_response",
-        "end_byte": 325716,
+        "end_byte": 326173,
         "file": "crates/agent/src/thread.rs",
         "kind": "provider_model_error",
-        "line": 8399,
-        "start_byte": 325647
+        "line": 8409,
+        "start_byte": 326104
       },
       {
         "call": "from_provider_response",
@@ -89638,11 +89638,11 @@
     "occurrences": [
       {
         "call": "ProjectEmptyState::new",
-        "end_byte": 279548,
+        "end_byte": 279640,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "project_empty_state_label",
-        "line": 7174,
-        "start_byte": 279531
+        "line": 7178,
+        "start_byte": 279623
       }
     ],
     "status": "accepted"
@@ -90089,11 +90089,11 @@
       },
       {
         "call": "tooltip_label",
-        "end_byte": 30989,
+        "end_byte": 31341,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "tooltip",
-        "line": 878,
-        "start_byte": 30910
+        "line": 884,
+        "start_byte": 31262
       }
     ],
     "status": "accepted"
@@ -90175,11 +90175,11 @@
     "occurrences": [
       {
         "call": "InlineDescription::Text",
-        "end_byte": 11480,
+        "end_byte": 11553,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "inline_description",
-        "line": 303,
-        "start_byte": 11427
+        "line": 304,
+        "start_byte": 11500
       }
     ],
     "status": "accepted"
@@ -90188,11 +90188,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 31368,
+        "end_byte": 31720,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 888,
-        "start_byte": 31315
+        "line": 894,
+        "start_byte": 31667
       }
     ],
     "status": "accepted"
@@ -90666,11 +90666,11 @@
     "occurrences": [
       {
         "call": "Label::new",
-        "end_byte": 285610,
+        "end_byte": 285702,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "label",
-        "line": 7318,
-        "start_byte": 285594
+        "line": 7322,
+        "start_byte": 285686
       }
     ],
     "status": "accepted"
@@ -103962,11 +103962,11 @@
     "occurrences": [
       {
         "call": "with_title",
-        "end_byte": 314007,
+        "end_byte": 314099,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "notification_title",
-        "line": 8058,
-        "start_byte": 313991
+        "line": 8062,
+        "start_byte": 314083
       }
     ],
     "status": "accepted"
@@ -104692,11 +104692,11 @@
       },
       {
         "call": "Label::new",
-        "end_byte": 32328,
+        "end_byte": 32680,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "label",
-        "line": 909,
-        "start_byte": 32245
+        "line": 915,
+        "start_byte": 32597
       }
     ],
     "status": "accepted"
@@ -107221,11 +107221,11 @@
     "occurrences": [
       {
         "call": "SharedString::from",
-        "end_byte": 297166,
+        "end_byte": 297258,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "shared_string",
-        "line": 7650,
-        "start_byte": 297143
+        "line": 7654,
+        "start_byte": 297235
       }
     ],
     "status": "ignored"
@@ -108947,11 +108947,11 @@
     "occurrences": [
       {
         "call": "SharedString::from",
-        "end_byte": 297597,
+        "end_byte": 297689,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "shared_string",
-        "line": 7664,
-        "start_byte": 297584
+        "line": 7668,
+        "start_byte": 297676
       }
     ],
     "status": "ignored"
@@ -111457,11 +111457,11 @@
     "occurrences": [
       {
         "call": "InputField::new",
-        "end_byte": 27232,
+        "end_byte": 27584,
         "file": "crates/language_models/src/provider/opencode.rs",
         "kind": "placeholder",
-        "line": 767,
-        "start_byte": 27195
+        "line": 773,
+        "start_byte": 27547
       }
     ],
     "status": "ignored"
@@ -112551,11 +112551,11 @@
     "occurrences": [
       {
         "call": "SharedString::from",
-        "end_byte": 248643,
+        "end_byte": 248735,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "shared_string",
-        "line": 6343,
-        "start_byte": 248619
+        "line": 6347,
+        "start_byte": 248711
       }
     ],
     "status": "ignored"
@@ -112564,11 +112564,11 @@
     "occurrences": [
       {
         "call": "SharedString::from",
-        "end_byte": 239324,
+        "end_byte": 239416,
         "file": "crates/sidebar/src/sidebar.rs",
         "kind": "shared_string",
-        "line": 6132,
-        "start_byte": 239307
+        "line": 6136,
+        "start_byte": 239399
       }
     ],
     "status": "ignored"
