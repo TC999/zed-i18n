@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 
 from tools.zed_i18n.apply_universal import apply_zed_runtime_patches
+from tools.zed_i18n.config import load_project_config, zed_clean_extract_checkout_path
 
 
 PATCH_TARGETS = (
@@ -71,7 +72,9 @@ PATCH_TARGETS = (
 class RuntimeOverlayPatchTests(unittest.TestCase):
     def setUp(self) -> None:
         self.root = Path.cwd()
-        self.source = self.root / ".cache" / "zed" / "v1.17.2-clean-extract"
+        self.source = zed_clean_extract_checkout_path(
+            self.root, load_project_config(self.root)
+        )
         if not self.source.exists():
             self.skipTest(f"clean Zed checkout not available: {self.source}")
         self.temp_root = self.root / "tests" / ".tmp" / self._testMethodName
