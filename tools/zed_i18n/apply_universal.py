@@ -590,6 +590,19 @@ impl JsonSchema for UiLocale {
         "        .add_basic_renderer::<settings::SaturatingBool>(render_toggle_button)\n",
         "        .add_basic_renderer::<settings::SaturatingBool>(render_toggle_button)\n        .add_basic_renderer::<settings::UiLocale>(crate::components::render_locale_picker)\n",
     )
+    # Upstream identifies the LLM Providers sub-page by comparing the sub-page
+    # title against a hard-coded English string. The universal rewrite turns
+    # the `SubPageLink.title` literal ("LLM Providers") into a runtime lookup,
+    # so the raw comparison never matches and the "Add Provider" popover
+    # button disappears. Route the comparison through the same lookup.
+    patch(
+        "crates/settings_ui/src/settings_ui.rs",
+        '            let is_llm_providers_page = current_sub_page.link.json_path == Some("llm_providers")\n'
+        '                && current_sub_page.link.title.as_ref() == "LLM Providers";\n',
+        '            let is_llm_providers_page = current_sub_page.link.json_path == Some("llm_providers")\n'
+        "                && current_sub_page.link.title.as_ref()\n"
+        '                    == localization::localized_str!("LLM Providers");\n',
+    )
     dependency("crates/settings_ui/Cargo.toml", "language", "localization")
 
     # Display-level "Plain Text" localization (VS Code convention: only the

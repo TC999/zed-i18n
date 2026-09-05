@@ -77,6 +77,11 @@ def apply_translations(
     if applied_settings_enum_labels:
         _disable_settings_dropdown_title_case(zed_root)
 
+    if "LLM Providers" in changed_sources:
+        _patch_llm_providers_subpage_title_check(
+            zed_root, rust_string_literal(translations["LLM Providers"])
+        )
+
     report.applied.extend(
         source
         for source in accepted_sources
@@ -323,6 +328,37 @@ def _disable_settings_dropdown_title_case(zed_root: Path) -> None:
     patched = text[:start] + patched_block + text[end:]
     if patched != text:
         path.write_text(patched, encoding="utf-8")
+
+
+def _patch_llm_providers_subpage_title_check(
+    zed_root: Path,
+    translation_literal: str,
+) -> None:
+    """Keep the LLM Providers sub-page identity comparison in sync.
+
+    Upstream detects the LLM Providers sub-page by comparing its title with a
+    hard-coded English string, while the `SubPageLink.title` occurrence in
+    `page_data.rs` is rewritten to the translated title. Align the comparison
+    in `settings_ui.rs` with the same translation so the "Add Provider"
+    popover button keeps rendering on localized builds.
+    """
+    path = zed_root / "crates" / "settings_ui" / "src" / "settings_ui.rs"
+    if not path.exists():
+        return
+
+    text = path.read_text(encoding="utf-8")
+    anchor = 'current_sub_page.link.title.as_ref() == "LLM Providers"'
+    patched = f"current_sub_page.link.title.as_ref() == {translation_literal}"
+    if anchor not in text:
+        if patched in text:
+            return
+        raise ValueError(
+            "expected LLM Providers sub-page title comparison not found in "
+            f"{path}: {anchor!r}"
+        )
+    if patched == anchor:
+        return
+    path.write_text(text.replace(anchor, patched, 1), encoding="utf-8")
 
 
 def _render_dropdown_function_span(text: str, path: Path) -> tuple[int, int]:

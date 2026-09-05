@@ -127,6 +127,14 @@ class RuntimeOverlayPatchTests(unittest.TestCase):
         self.assertIn("let current_value_index", dropdown)
         self.assertIn("localization::lookup(&display_source)", dropdown)
         self.assertIn(".or_else(|| localization::lookup(label))", dropdown)
+        settings_ui = self._read("crates/settings_ui/src/settings_ui.rs")
+        self.assertIn(
+            'current_sub_page.link.title.as_ref()\n                    == localization::localized_str!("LLM Providers")',
+            settings_ui,
+        )
+        self.assertNotIn(
+            'current_sub_page.link.title.as_ref() == "LLM Providers"', settings_ui
+        )
         context_menu = self._read("crates/ui/src/components/context_menu.rs")
         self.assertIn("MENU_ITEM-ACTION-", context_menu)
         self.assertNotIn('format!("MENU_ITEM-{}", label)', context_menu)

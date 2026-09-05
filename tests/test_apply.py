@@ -124,6 +124,75 @@ class ApplyTests(unittest.TestCase):
         self.assertEqual(report.applied, [])
         self.assertEqual(report.stale, [])
 
+    def test_syncs_llm_providers_subpage_title_comparison(self) -> None:
+        page_data_path = self.root / "crates" / "settings_ui" / "src" / "page_data.rs"
+        page_data_path.parent.mkdir(parents=True)
+        page_data_path.write_text(
+            '                title: "LLM Providers".into(),\n',
+            encoding="utf-8",
+        )
+        settings_ui_path = (
+            self.root / "crates" / "settings_ui" / "src" / "settings_ui.rs"
+        )
+        settings_ui_path.write_text(
+            '            let is_llm_providers_page = current_sub_page.link.json_path == Some("llm_providers")\n'
+            '                && current_sub_page.link.title.as_ref() == "LLM Providers";\n',
+            encoding="utf-8",
+        )
+        manifest = {
+            "LLM Providers": {
+                "status": "accepted",
+                "occurrences": [
+                    {
+                        "file": "crates/settings_ui/src/page_data.rs",
+                        "line": 1,
+                        "call": "SubPageLink.title",
+                        "kind": "settings_subpage_title",
+                    }
+                ],
+            }
+        }
+
+        report = apply_translations(
+            self.root, manifest, {"LLM Providers": "LLM 공급자"}
+        )
+
+        self.assertTrue(report.ok)
+        self.assertEqual(report.applied, ["LLM Providers"])
+        self.assertIn('"LLM 공급자"', page_data_path.read_text(encoding="utf-8"))
+        self.assertIn(
+            'current_sub_page.link.title.as_ref() == "LLM 공급자"',
+            settings_ui_path.read_text(encoding="utf-8"),
+        )
+
+    def test_llm_providers_subpage_title_comparison_failure_is_loud(self) -> None:
+        page_data_path = self.root / "crates" / "settings_ui" / "src" / "page_data.rs"
+        page_data_path.parent.mkdir(parents=True)
+        page_data_path.write_text(
+            '                title: "LLM Providers".into(),\n',
+            encoding="utf-8",
+        )
+        settings_ui_path = (
+            self.root / "crates" / "settings_ui" / "src" / "settings_ui.rs"
+        )
+        settings_ui_path.write_text("// upstream drifted: no comparison here\n", encoding="utf-8")
+        manifest = {
+            "LLM Providers": {
+                "status": "accepted",
+                "occurrences": [
+                    {
+                        "file": "crates/settings_ui/src/page_data.rs",
+                        "line": 1,
+                        "call": "SubPageLink.title",
+                        "kind": "settings_subpage_title",
+                    }
+                ],
+            }
+        }
+
+        with self.assertRaisesRegex(ValueError, "LLM Providers sub-page title"):
+            apply_translations(self.root, manifest, {"LLM Providers": "LLM 공급자"})
+
     def test_stale_fallback_does_not_rewrite_later_matching_literals(self) -> None:
         source_path = self.root / "main.rs"
         source_path.write_text(
